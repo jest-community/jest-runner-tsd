@@ -4,7 +4,7 @@ const { pass, fail } = require('create-jest-runner');
 module.exports = async ({ testPath }) => {
   // Convert absolute path to relative path
   const testFile = testPath.replace(process.cwd(), '');
-  const start = Date.now();
+  const start = +new Date();
   const diagnose = await tsd({
     cwd: process.cwd(),
     testFiles: [ testFile ]
