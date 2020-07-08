@@ -5,7 +5,7 @@ module.exports = async ({ testPath }) => {
   // Convert absolute path to relative path
   const testFile = testPath.replace(process.cwd(), '');
   const start = +new Date();
-  const diagnose = await tsd({
+  const diagnose = await tsd.default({
     cwd: process.cwd(),
     testFiles: [ testFile ]
   });
