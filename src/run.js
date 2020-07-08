@@ -1,32 +1,37 @@
-const tsd = require('tsd');
-const { pass, fail } = require('create-jest-runner');
+// @ts-check
+
+const tsd = require("tsd");
+const { pass } = require("create-jest-runner");
+const { fail } = require("./fail");
 
 module.exports = async ({ testPath }) => {
   // Convert absolute path to relative path
-  const testFile = testPath.replace(process.cwd(), '');
+  const testFile = testPath.replace(process.cwd(), "");
   const start = +new Date();
-  const diagnose = await tsd({
+  const diagnose = await tsd.default({
     cwd: process.cwd(),
-    testFiles: [ testFile ]
+    testFiles: [testFile],
   });
 
-  // Currently only reports a single error.
   if (diagnose.length > 0) {
+    const failures = diagnose.map((test) => ({
+      path: test.fileName,
+      errorMessage: test.message,
+      title: test.severity + testFile,
+    }));
     return fail({
       start,
       end: +new Date(),
-      test: {
-        path: diagnose[0].fileName, 
-        errorMessage: diagnose[0].message, 
-        title: diagnose[0].severity + ' ' + testFile
-      }
+      failures: failures,
     });
   }
 
+  // @TODO Include the number of successful tests
   return pass({
-    start, end: +new Date(), 
+    start,
+    end: +new Date(),
     test: {
-      path: testPath
-    } 
+      path: testPath,
+    },
   });
 };
