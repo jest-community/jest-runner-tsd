@@ -17,7 +17,7 @@ module.exports = async ({ testPath }) => {
     const failures = diagnose.map((test) => ({
       path: test.fileName,
       errorMessage: test.message,
-      title: test.severity + testFile,
+      title: "In " + testFile + ": " + test.message,
     }));
     return fail({
       start,
