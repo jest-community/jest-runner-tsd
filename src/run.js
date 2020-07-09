@@ -17,12 +17,13 @@ module.exports = async ({ testPath }) => {
     const failures = diagnose.map((test) => ({
       path: test.fileName,
       errorMessage: test.message,
-      title: "In " + testFile + ": " + test.message,
+      title: `${testFile}:${test.line}:${test.column} - ${test.severity} - ${test.message}`
     }));
+
     return fail({
       start,
       end: +new Date(),
-      failures: failures,
+      failures
     });
   }
 
