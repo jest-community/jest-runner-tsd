@@ -2,8 +2,8 @@
 
 const { toMultipleTestResults } = require("./toMultipleTestResults");
 
-module.exports.fail = ({ start, end, failures }) =>
-  toMultipleTestResults({
+module.exports.fail = ({ start, end, failures }) => {
+  return toMultipleTestResults({
     stats: {
       failures: failures.length,
       pending: 0,
@@ -16,3 +16,4 @@ module.exports.fail = ({ start, end, failures }) =>
     jestTestPath: failures[0].path,
     skipped: false,
   });
+}
