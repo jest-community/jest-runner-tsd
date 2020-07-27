@@ -1,6 +1,6 @@
 // @ts-check
 
-const { toMultipleTestResults } = require("./toMultipleTestResults");
+const { toMultipleTestResults } = require('./toMultipleTestResults');
 
 module.exports.fail = ({ start, end, failures }) => {
   return toMultipleTestResults({

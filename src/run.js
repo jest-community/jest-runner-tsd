@@ -1,12 +1,12 @@
 // @ts-check
 
-const tsd = require("tsd");
-const { pass } = require("create-jest-runner");
-const { fail } = require("./fail");
+const tsd = require('tsd');
+const { pass } = require('create-jest-runner');
+const { fail } = require('./fail');
 
 module.exports = async ({ testPath }) => {
   // Convert absolute path to relative path
-  const testFile = testPath.replace(process.cwd(), "");
+  const testFile = testPath.replace(process.cwd(), '');
   const start = +new Date();
   const diagnose = await tsd.default({
     cwd: process.cwd(),
