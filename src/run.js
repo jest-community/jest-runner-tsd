@@ -1,7 +1,7 @@
 // @ts-check
 
 const tsd = require('tsd');
-const { pass } = require('create-jest-runner');
+const { pass } = require('./pass');
 const { fail } = require('./fail');
 
 module.exports = async ({ testPath }) => {
@@ -14,12 +14,12 @@ module.exports = async ({ testPath }) => {
   });
 
   const numTests = extendedDiagnostics.numTests;
-  const numFailedTests = extendedDiagnostics.diagnostics.length;
-  const numPassedTests = numTests - numFailedTests;
+  const numFailed = extendedDiagnostics.diagnostics.length;
+  const numPassed = numTests - numFailed;
 
   const failedTests = extendedDiagnostics.diagnostics;
 
-  if (numFailedTests > 0) {
+  if (numFailed > 0) {
     const failures = failedTests.map((test) => ({
       path: test.fileName,
       errorMessage: test.message,
@@ -29,14 +29,15 @@ module.exports = async ({ testPath }) => {
     return fail({
       start,
       end: +new Date(),
-      failures
+      failures,
+      numPassed
     });
   }
 
-  // @TODO Include the number of successful tests
   return pass({
     start,
     end: +new Date(),
+    numPassed,
     test: {
       path: testPath,
     },

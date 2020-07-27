@@ -1,19 +1,16 @@
-// @ts-check
-
 const { toMultipleTestResults } = require('./toMultipleTestResults');
 
-module.exports.fail = ({ start, end, failures, numPassed }) => {
+module.exports.pass = ({ start, end, test, numPassed }) => {
   return toMultipleTestResults({
     stats: {
-      failures: failures.length,
+      failures: 0,
       pending: 0,
       passes: numPassed,
       todo: 0,
       start,
       end,
     },
-    tests: failures,
-    jestTestPath: failures[0].path,
-    skipped: false,
+    tests: [{ duration: end - start, ...test }],
+    jestTestPath: test.path,
   });
-}
+};
