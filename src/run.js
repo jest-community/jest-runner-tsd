@@ -8,13 +8,19 @@ module.exports = async ({ testPath }) => {
   // Convert absolute path to relative path
   const testFile = testPath.replace(process.cwd(), '');
   const start = +new Date();
-  const diagnose = await tsd.default({
+  const extendedDiagnostics = await tsd.default({
     cwd: process.cwd(),
     testFiles: [testFile],
   });
 
-  if (diagnose.length > 0) {
-    const failures = diagnose.map((test) => ({
+  const numTests = extendedDiagnostics.numTests;
+  const numFailedTests = extendedDiagnostics.diagnostics.length;
+  const numPassedTests = numTests - numFailedTests;
+
+  const failedTests = extendedDiagnostics.diagnostics;
+
+  if (numFailedTests > 0) {
+    const failures = failedTests.map((test) => ({
       path: test.fileName,
       errorMessage: test.message,
       title: `${testFile}:${test.line}:${test.column} - ${test.severity} - ${test.message}`
