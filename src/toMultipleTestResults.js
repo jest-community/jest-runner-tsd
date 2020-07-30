@@ -33,8 +33,8 @@ module.exports.toMultipleTestResults = ({
         failureMessages: [test.errorMessage],
         fullName: test.testPath,
         numPassingAsserts: test.errorMessage ? 1 : 0,
-        status: test.errorMessage ? "failed" : "passed",
-        title: test.title || "",
+        status: test.errorMessage ? 'failed' : 'passed',
+        title: test.title || '',
       };
     }),
   };
