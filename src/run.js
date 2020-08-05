@@ -7,15 +7,14 @@ const { readFileSync } = require('fs');
 const { parse } = require('jest-docblock');
 
 /**
- * @param {string} testPath 
- * @returns {string}
+ * @param {string} testPath
  */
 const findTypingsFile = testPath => {
   const fileContents = readFileSync(testPath).toString();
   const parsedDocblocks = parse(fileContents);
   const typingsFile = String(parsedDocblocks.type);
 
-  return typingsFile;
+  return { typingsFile };
 }
 
 module.exports = async ({ testPath }) => {
@@ -26,6 +25,7 @@ module.exports = async ({ testPath }) => {
   const extendedDiagnostics = await tsd.default({
     cwd: process.cwd(),
     testFiles: [testFile],
+    ...typingsFile,
   });
 
   const numTests = extendedDiagnostics.numTests;
