@@ -1,6 +1,7 @@
 // @ts-check
 
 const tsd = require('tsd');
+const { join } = require('path');
 const { pass } = require('./pass');
 const { fail } = require('./fail');
 const { readFileSync } = require('fs');
@@ -14,18 +15,22 @@ const findTypingsFile = testPath => {
   const parsedDocblocks = parse(fileContents);
   const typingsFile = String(parsedDocblocks.type);
 
-  return { typingsFile };
+  return typingsFile;
 }
 
 module.exports = async ({ testPath }) => {
   // Convert absolute path to relative path
   const testFile = testPath.replace(process.cwd(), '');
   const start = +new Date();
-  const typingsFile = findTypingsFile(testPath);
+  const typingsFileRelativePath = findTypingsFile(testPath);
+
+  // Remove filename from the path and join it with typingsFile relative path
+  const typingsFile = join(testFile.substring(0, testFile.lastIndexOf('/')), typingsFileRelativePath);
+
   const extendedDiagnostics = await tsd.default({
     cwd: process.cwd(),
     testFiles: [testFile],
-    ...typingsFile,
+    typingsFile,
   });
 
   const numTests = extendedDiagnostics.numTests;
