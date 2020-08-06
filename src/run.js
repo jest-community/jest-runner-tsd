@@ -13,9 +13,12 @@ const { parse } = require('jest-docblock');
 const findTypingsFile = testPath => {
   const fileContents = readFileSync(testPath).toString();
   const parsedDocblocks = parse(fileContents);
-  const typingsFile = String(parsedDocblocks.type);
+  const typingsFile = parsedDocblocks.type || '';
 
-  return typingsFile;
+  if (typingsFile === 'undefined')
+    return '';
+
+  return String(typingsFile);
 }
 
 module.exports = async ({ testPath }) => {
