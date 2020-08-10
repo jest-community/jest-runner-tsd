@@ -6,19 +6,19 @@ A Jest runner that tests typescript typings using [tsd](https://github.com/SamVe
 
 ### Install
 
-Install `jest`, `tsd` and `jest-runner-tsd`
+Install `jest-runner-tsd`
 
 ```bash
-yarn add --dev jest tsd jest-runner-tsd
+yarn add --dev jest-runner-tsd
 
 # or with NPM
 
-npm install --save-dev jest tsd jest-runner-tsd
+npm install --save-dev jest-runner-tsd
 ```
 
 ### Adding to Jest Config
 
-Create a `jest.config.js` file and have the runner property set to `jest-runner-tsd` as shown below:
+Create a `jest.config.types.js` file and have the runner property set to `jest-runner-tsd` as shown below:
 
 ```js
 module.exports = {
