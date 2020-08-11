@@ -2,9 +2,7 @@
 
 A Jest runner that tests typescript typings using [tsd](https://github.com/SamVerschueren/tsd) under the hood.
 
-## Usage
-
-### Install
+## Install
 
 Install `jest-runner-tsd`
 
@@ -22,7 +20,7 @@ Create a `jest.config.types.js` file and have the runner property set to `jest-r
 
 ```js
 module.exports = {
-  runner: "jest-runner-tsd",
+  runner: 'jest-runner-tsd',
 };
 ```
 
@@ -31,11 +29,18 @@ In the project `package.json` file, modify the scripts block to use the configur
 ```json
 ...
 "scripts": {
-    ...
-    "type-tests": "yarn jest --config jest.config.types.js",
-    ...
+  ...
+  "type-tests": "yarn jest --config jest.config.types.js"
 }
 ...
+```
+
+### Run
+
+To start the test, just execute the following command
+
+```bash
+yarn test-types
 ```
 
 ### Type definition file
@@ -48,12 +53,4 @@ If the type definition files are located somewhere else then specify its path in
 /**
  * @type ../../custom/path/to/types.d.ts
  **/
-```
-
-### Run
-
-Execute the following commnand
-
-```
-yarn test-types
 ```
