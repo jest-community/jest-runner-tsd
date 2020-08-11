@@ -43,14 +43,42 @@ To start the test, just execute the following command
 yarn test-types
 ```
 
-### Type definition file
+## Writing tests
+
+> This runner uses TSD. To see the available assertions, checkout it's [documentation](https://github.com/SamVerschueren/tsd)
+
+### For JavaScript Projects
+
+There are multiple ways you can pass a type definition file.
+
+#### Default
 
 The type definitions should be in a file named `index.d.ts` in the root directory of the project by default.
 
-If the type definition files are located somewhere else then specify its path in the top of respective test file as shown below:
+#### `types` property in package.json
+
+You can also set your `types` property in package.json. The runner will automatically pick the type defintion file from there.
+
+```json
+{
+  ...
+  "types": "path/to/types.d.ts"
+}
+```
+
+#### Docblocks
+
+If the type definition file is located somewhere else then specify its path in the top of respective test file using the `@type` inside a docblock.
 
 ```ts
 /**
  * @type ../../custom/path/to/types.d.ts
  **/
 ```
+
+### For TypeScript Projects
+
+> **Note:** This is only a workaround. A stable solution may be introduced in future.
+
+Due to [limitations in TSD](https://github.com/SamVerschueren/tsd/issues/32), the only solution now for testing types in TypeScript projects
+would be to have a empty type definition file and specify it's path using one of the many methods explained above.
