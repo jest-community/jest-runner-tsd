@@ -23,7 +23,7 @@ const findTypingsFile = testPath => {
 
 module.exports = async ({ testPath }) => {
   // Convert absolute path to relative path
-  const testFile = testPath.replace(process.cwd(), '');
+  const testFile = testPath.replace(process.cwd() + '/', '');
   const start = +new Date();
   const typingsFileRelativePath = findTypingsFile(testPath);
 
