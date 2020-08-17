@@ -1,6 +1,6 @@
 {
   "name": "jest-runner-tsd",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Jest runner that tests typescript typings using tsd under the hood",
   "main": "src/index.js",
   "license": "MIT",
@@ -12,6 +12,6 @@
   "dependencies": {
     "create-jest-runner": "^0.6.0",
     "jest-docblock": "^26.0.0",
-    "tsd": "^0.11.0"
+    "mlh-tsd": "^0.14.1"
   }
 }

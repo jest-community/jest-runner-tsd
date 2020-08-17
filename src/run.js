@@ -1,6 +1,6 @@
 // @ts-check
 
-const tsd = require('tsd');
+const tsd = require('mlh-tsd');
 const { join } = require('path');
 const { pass } = require('./pass');
 const { fail } = require('./fail');
