@@ -1,9 +1,14 @@
 {
   "name": "jest-runner-tsd",
   "version": "1.0.0",
-  "description": "Custom jest runner to test typscript typings",
+  "description": "A Jest runner that tests typescript typings using tsd under the hood",
   "main": "src/index.js",
   "license": "MIT",
+  "repository": "MLH-Fellowship/jest-runner-tsd",
+  "contributors": [
+    "Karan Sanjeev Nair <yo@alphaman.me> (https://alphaman.me)",
+    "Saurabh Agarwala <saur.agarwala@gmail.com>"
+  ],
   "dependencies": {
     "create-jest-runner": "^0.6.0",
     "jest-docblock": "^26.0.0",
