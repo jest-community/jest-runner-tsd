@@ -1,11 +1,13 @@
-module.exports.toMultipleTestResults = ({
+module.exports.toTestResult = ({
   stats,
   skipped,
+  errorMessage,
   tests,
   jestTestPath,
 }) => {
   return {
     console: null,
+    failureMessage: errorMessage,
     numFailingTests: stats.failures,
     numPassingTests: stats.passes,
     numPendingTests: stats.pending,
@@ -26,7 +28,7 @@ module.exports.toMultipleTestResults = ({
     sourceMaps: {},
     testExecError: null,
     testFilePath: jestTestPath,
-    testResults: tests.map((test) => {
+    testResults: tests.map(test => {
       return {
         ancestorTitles: [],
         duration: test.duration,

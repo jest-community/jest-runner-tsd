@@ -43,17 +43,21 @@ module.exports = async ({ testPath }) => {
   const failedTests = extendedDiagnostics.diagnostics;
 
   if (numFailed > 0) {
-    const failures = failedTests.map((test) => ({
-      path: test.fileName,
-      errorMessage: test.message,
-      title: `${testFile}:${test.line}:${test.column} - ${test.severity} - ${test.message}`
-    }));
+    let errorMessage = [];
+
+    failedTests.forEach(test => {
+      errorMessage.push(`${testFile}:${test.line}:${test.column} - ${test.severity} - ${test.message}`);
+    });
 
     return fail({
       start,
       end: +new Date(),
-      failures,
-      numPassed
+      test: {
+        path: testPath
+      },
+      numFailed,
+      numPassed,
+      errorMessage,
     });
   }
 
