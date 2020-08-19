@@ -1,19 +1,20 @@
-// @ts-check
+const { toTestResult } = require('./toTestResult');
 
-const { toMultipleTestResults } = require('./toMultipleTestResults');
+module.exports.fail = ({ start, end, test, errorMessage, numFailed, numPassed }) => {
+  const stats = {
+    failures: numFailed,
+    passes: numPassed,
+    pending: 0,
+    todo: 0,
+    end,
+    start,
+  };
 
-module.exports.fail = ({ start, end, failures, numPassed }) => {
-  return toMultipleTestResults({
-    stats: {
-      failures: failures.length,
-      pending: 0,
-      passes: numPassed,
-      todo: 0,
-      start,
-      end,
-    },
-    tests: failures,
-    jestTestPath: failures[0].path,
-    skipped: false,
+  return toTestResult({
+    stats,
+    title: 'Type Checks',
+    errorMessage: errorMessage.join('\n'),
+    tests: [{duration: end - start, ...test}],
+    jestTestPath: test.path,
   });
-}
+};

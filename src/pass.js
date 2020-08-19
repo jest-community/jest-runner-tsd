@@ -1,7 +1,7 @@
-const { toMultipleTestResults } = require('./toMultipleTestResults');
+const { toTestResult } = require('./toTestResult');
 
 module.exports.pass = ({ start, end, test, numPassed }) => {
-  return toMultipleTestResults({
+  return toTestResult({
     stats: {
       failures: 0,
       pending: 0,
