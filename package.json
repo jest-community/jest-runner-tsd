@@ -1,6 +1,6 @@
 {
   "name": "jest-runner-tsd",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A Jest runner that tests typescript typings using tsd under the hood",
   "main": "src/index.js",
   "license": "MIT",
