@@ -1,0 +1,25 @@
+name: Unit tests
+
+on:
+  push:
+    branches:
+      - main
+      - next
+  pull_request:
+    branches:
+      - main
+      - next
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          cache: yarn
+      - name: install
+        run: yarn
+      - name: run ESLint
+        run: yarn lint

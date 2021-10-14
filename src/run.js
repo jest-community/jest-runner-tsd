@@ -15,11 +15,10 @@ const findTypingsFile = testPath => {
   const parsedDocblocks = parse(fileContents);
   const typingsFile = parsedDocblocks.type || '';
 
-  if (typingsFile === 'undefined')
-    return '';
+  if (typingsFile === 'undefined') return '';
 
   return String(typingsFile);
-}
+};
 
 module.exports = async ({ testPath }) => {
   // Convert absolute path to relative path
@@ -28,7 +27,10 @@ module.exports = async ({ testPath }) => {
   const typingsFileRelativePath = findTypingsFile(testPath);
 
   // Remove filename from the path and join it with typingsFile relative path
-  const typingsFile = join(testFile.substring(0, testFile.lastIndexOf('/')), typingsFileRelativePath);
+  const typingsFile = join(
+    testFile.substring(0, testFile.lastIndexOf('/')),
+    typingsFileRelativePath
+  );
 
   const extendedDiagnostics = await tsd.default({
     cwd: process.cwd(),
@@ -46,14 +48,16 @@ module.exports = async ({ testPath }) => {
     let errorMessage = [];
 
     failedTests.forEach(test => {
-      errorMessage.push(`${testFile}:${test.line}:${test.column} - ${test.severity} - ${test.message}`);
+      errorMessage.push(
+        `${testFile}:${test.line}:${test.column} - ${test.severity} - ${test.message}`
+      );
     });
 
     return fail({
       start,
       end: +new Date(),
       test: {
-        path: testPath
+        path: testPath,
       },
       numFailed,
       numPassed,

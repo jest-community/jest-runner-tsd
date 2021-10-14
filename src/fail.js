@@ -1,6 +1,13 @@
 const { toTestResult } = require('./toTestResult');
 
-module.exports.fail = ({ start, end, test, errorMessage, numFailed, numPassed }) => {
+module.exports.fail = ({
+  start,
+  end,
+  test,
+  errorMessage,
+  numFailed,
+  numPassed,
+}) => {
   const stats = {
     failures: numFailed,
     passes: numPassed,
@@ -14,7 +21,7 @@ module.exports.fail = ({ start, end, test, errorMessage, numFailed, numPassed })
     stats,
     title: 'Type Checks',
     errorMessage: errorMessage.join('\n'),
-    tests: [{duration: end - start, ...test}],
+    tests: [{ duration: end - start, ...test }],
     jestTestPath: test.path,
   });
 };

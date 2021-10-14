@@ -9,9 +9,25 @@
     "Karan Sanjeev Nair <yo@alphaman.me> (https://alphaman.me)",
     "Saurabh Agarwala <saur.agarwala@gmail.com>"
   ],
+  "scripts": {
+    "lint": "eslint ."
+  },
   "dependencies": {
     "create-jest-runner": "^0.6.0",
     "jest-docblock": "^26.0.0",
     "mlh-tsd": "^0.14.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.4"
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "singleQuote": true
   }
 }
