@@ -9,21 +9,21 @@ const { fail } = require('./fail');
 
 /**
  * @param {string} testPath
- * */
+ */
 const resolveTypingsFile = testPath => {
   const fileContents = readFileSync(testPath, 'utf8');
-  const parsedDocblocks = parse(fileContents);
+  let { type } = parse(fileContents);
 
-  if (Array.isArray(parsedDocblocks.type)) {
-    return parsedDocblocks.type[0];
+  if (Array.isArray(type)) {
+    type = type[0];
   }
 
-  return parsedDocblocks.type || '';
+  return join(dirname(testPath), type || '.');
 };
 
 module.exports = async ({ testPath }) => {
   const testFile = relative(process.cwd(), testPath);
-  const typingsFile = join(dirname(testFile), resolveTypingsFile(testPath));
+  const typingsFile = relative(process.cwd(), resolveTypingsFile(testPath));
 
   const start = Date.now();
 
