@@ -1,42 +1,39 @@
 // @ts-check
 
+const { readFileSync } = require('fs');
+const { dirname, join, relative } = require('path');
+const { parse } = require('jest-docblock');
 const tsd = require('mlh-tsd');
-const { join } = require('path');
 const { pass } = require('./pass');
 const { fail } = require('./fail');
-const { readFileSync } = require('fs');
-const { parse } = require('jest-docblock');
 
 /**
  * @param {string} testPath
- */
+ * */
 const findTypingsFile = testPath => {
-  const fileContents = readFileSync(testPath).toString();
+  const fileContents = readFileSync(testPath, 'utf8');
   const parsedDocblocks = parse(fileContents);
-  const typingsFile = parsedDocblocks.type || '';
 
-  if (typingsFile === 'undefined') return '';
+  if (Array.isArray(parsedDocblocks.type)) {
+    return parsedDocblocks.type[0];
+  }
 
-  return String(typingsFile);
+  return parsedDocblocks.type || '';
 };
 
 module.exports = async ({ testPath }) => {
-  // Convert absolute path to relative path
-  const testFile = testPath.replace(process.cwd() + '/', '');
-  const start = +new Date();
-  const typingsFileRelativePath = findTypingsFile(testPath);
+  const testFile = relative(process.cwd(), testPath);
+  const typingsFile = join(dirname(testFile), findTypingsFile(testPath));
 
-  // Remove filename from the path and join it with typingsFile relative path
-  const typingsFile = join(
-    testFile.substring(0, testFile.lastIndexOf('/')),
-    typingsFileRelativePath
-  );
+  const start = Date.now();
 
   const extendedDiagnostics = await tsd.default({
     cwd: process.cwd(),
     testFiles: [testFile],
     typingsFile,
   });
+
+  const end = Date.now();
 
   const numTests = extendedDiagnostics.numTests;
   const numFailed = extendedDiagnostics.diagnostics.length;
@@ -55,7 +52,7 @@ module.exports = async ({ testPath }) => {
 
     return fail({
       start,
-      end: +new Date(),
+      end,
       test: {
         path: testPath,
       },
@@ -67,7 +64,7 @@ module.exports = async ({ testPath }) => {
 
   return pass({
     start,
-    end: +new Date(),
+    end,
     numPassed,
     test: {
       path: testPath,
