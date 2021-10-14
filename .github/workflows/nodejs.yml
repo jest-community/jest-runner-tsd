@@ -11,7 +11,23 @@ on:
       - next
 
 jobs:
+  prepare-yarn-cache:
+    name: Prepare yarn cache
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          cache: yarn
+
+      - name: Validate cache
+        run: yarn
+
   lint:
+    needs: prepare-yarn-cache
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -23,3 +39,45 @@ jobs:
         run: yarn
       - name: run ESLint
         run: yarn lint
+
+  test-node:
+    name: Test on Node.js v${{ matrix.node-version }}
+    needs: prepare-yarn-cache
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [10.x, 12.x, 14.x, 16.x]
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: yarn
+      - name:
+          install
+        run: yarn
+      - name: run tests
+        run: yarn test
+
+  test-os:
+    name: Test on ${{ matrix.os }} using Node.js LTS
+    needs: prepare-yarn-cache
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          cache: yarn
+      - name: install
+        run: yarn
+      - name: run tests
+        run: yarn test
