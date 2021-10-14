@@ -2,7 +2,7 @@
  * @type ./concat.d.ts
  */
 
-import {expectType} from 'mlh-tsd';
+import { expectType } from 'mlh-tsd';
 import concat from './concat';
 
 expectType<string>(concat('pre', 'fix'));

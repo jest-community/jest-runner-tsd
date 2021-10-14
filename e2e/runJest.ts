@@ -26,7 +26,8 @@ const runJest = async (project: string, options = []) => {
     {
       env: { FORCE_COLOR: '0' },
       reject: false,
-    });
+    }
+  );
   return `${normalize(stderr)}\n${normalize(stdout)}`;
 };
 

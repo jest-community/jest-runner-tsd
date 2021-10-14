@@ -1,4 +1,4 @@
-import {expectType} from 'mlh-tsd';
+import { expectType } from 'mlh-tsd';
 import concat from '.';
 
 expectType<string>(concat('pre', 'fix'));
