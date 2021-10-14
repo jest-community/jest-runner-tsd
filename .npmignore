@@ -1,0 +1,4 @@
+e2e/
+.*
+*.log
+*.config.js
