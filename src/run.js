@@ -10,7 +10,7 @@ const { fail } = require('./fail');
 /**
  * @param {string} testPath
  * */
-const findTypingsFile = testPath => {
+const resolveTypingsFile = testPath => {
   const fileContents = readFileSync(testPath, 'utf8');
   const parsedDocblocks = parse(fileContents);
 
@@ -23,7 +23,7 @@ const findTypingsFile = testPath => {
 
 module.exports = async ({ testPath }) => {
   const testFile = relative(process.cwd(), testPath);
-  const typingsFile = join(dirname(testFile), findTypingsFile(testPath));
+  const typingsFile = join(dirname(testFile), resolveTypingsFile(testPath));
 
   const start = Date.now();
 
