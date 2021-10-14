@@ -1,7 +1,7 @@
 // @ts-check
 
-const { readFileSync } = require('fs');
 const { dirname, join, relative } = require('path');
+const { readFileSync } = require('graceful-fs');
 const { parse } = require('jest-docblock');
 const tsd = require('mlh-tsd');
 const { pass } = require('./pass');
