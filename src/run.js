@@ -26,7 +26,7 @@ const resolveTypingsFile = testPath => {
 /**
  * @param {string} input
  */
-const toGlob = input => input.split(sep).join(posix.sep);
+const normalizeSlashes = input => input.split(sep).join(posix.sep);
 
 module.exports = async ({ testPath }) => {
   const testFile = relative('', testPath);
@@ -36,7 +36,7 @@ module.exports = async ({ testPath }) => {
 
   const { diagnostics, numTests } = await tsd.default({
     cwd: process.cwd(),
-    testFiles: [toGlob(testFile)],
+    testFiles: [normalizeSlashes(testFile)],
     typingsFile,
   });
 
@@ -50,7 +50,9 @@ module.exports = async ({ testPath }) => {
 
     diagnostics.forEach(test => {
       errorMessage.push(
-        `${testFile}:${test.line}:${test.column} - ${test.severity} - ${test.message}`
+        `${normalizeSlashes(testFile)}:${test.line}:${test.column} - ${
+          test.severity
+        } - ${test.message}`
       );
     });
 
