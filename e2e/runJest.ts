@@ -7,10 +7,11 @@ const normalize = (output: string) =>
   output
     .replace(/\(?\d*\.?\d+ ?m?s\b\)?/g, '')
     .replace(/, estimated/g, '')
-    .replace(new RegExp(rootDir, 'g'), '/mocked-path-to-jest-runner-mocha')
-    .replace(new RegExp('.*at .*\\n', 'g'), 'mocked-stack-trace')
+    .replace(new RegExp(rootDir, 'g'), '/mocked-path-to-jest-runner-tsd')
     .replace(/.*at .*\\n/g, 'mocked-stack-trace')
     .replace(/(mocked-stack-trace)+/, '      at mocked-stack-trace')
+    .replace(new RegExp('\u00D7', 'g'), '\u2715')
+    .replace(new RegExp('\u221A', 'g'), '\u2713')
     .replace(/\s+\n/g, '\n');
 
 const runJest = async (project: string, options = []) => {
