@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reads \`@type\` comment in docblock 1`] = `
+"PASS e2e/__fixtures__/docblock/concat.test.ts
+  ✓
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:
+Ran all test suites.
+"
+`;

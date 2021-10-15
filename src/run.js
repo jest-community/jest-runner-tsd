@@ -1,61 +1,64 @@
-// @ts-check
-
+const { dirname, join, posix, relative, sep } = require('path');
+const { readFileSync } = require('graceful-fs');
+const { parse } = require('jest-docblock');
 const tsd = require('mlh-tsd');
-const { join } = require('path');
 const { pass } = require('./pass');
 const { fail } = require('./fail');
-const { readFileSync } = require('fs');
-const { parse } = require('jest-docblock');
 
 /**
  * @param {string} testPath
  */
-const findTypingsFile = testPath => {
-  const fileContents = readFileSync(testPath).toString();
-  const parsedDocblocks = parse(fileContents);
-  const typingsFile = parsedDocblocks.type || '';
+const resolveTypingsFile = testPath => {
+  const fileContents = readFileSync(testPath, 'utf8');
+  let { type } = parse(fileContents);
 
-  if (typingsFile === 'undefined') return '';
+  if (Array.isArray(type)) {
+    type = type[0];
+  }
 
-  return String(typingsFile);
+  if (type === undefined) {
+    return '';
+  }
+
+  return join(dirname(testPath), type);
 };
 
+/**
+ * @param {string} input
+ */
+const normalizeSlashes = input => input.split(sep).join(posix.sep);
+
 module.exports = async ({ testPath }) => {
-  // Convert absolute path to relative path
-  const testFile = testPath.replace(process.cwd() + '/', '');
-  const start = +new Date();
-  const typingsFileRelativePath = findTypingsFile(testPath);
+  const testFile = relative('', testPath);
+  const typingsFile = relative('', resolveTypingsFile(testPath)) || '.';
 
-  // Remove filename from the path and join it with typingsFile relative path
-  const typingsFile = join(
-    testFile.substring(0, testFile.lastIndexOf('/')),
-    typingsFileRelativePath
-  );
+  const start = Date.now();
 
-  const extendedDiagnostics = await tsd.default({
+  const { diagnostics, numTests } = await tsd.default({
     cwd: process.cwd(),
-    testFiles: [testFile],
+    testFiles: [normalizeSlashes(testFile)],
     typingsFile,
   });
 
-  const numTests = extendedDiagnostics.numTests;
-  const numFailed = extendedDiagnostics.diagnostics.length;
-  const numPassed = numTests - numFailed;
+  const end = Date.now();
 
-  const failedTests = extendedDiagnostics.diagnostics;
+  const numFailed = diagnostics.length;
+  const numPassed = numTests - numFailed;
 
   if (numFailed > 0) {
     let errorMessage = [];
 
-    failedTests.forEach(test => {
+    diagnostics.forEach(test => {
       errorMessage.push(
-        `${testFile}:${test.line}:${test.column} - ${test.severity} - ${test.message}`
+        `${normalizeSlashes(testFile)}:${test.line}:${test.column} - ${
+          test.severity
+        } - ${test.message}`
       );
     });
 
     return fail({
       start,
-      end: +new Date(),
+      end,
       test: {
         path: testPath,
       },
@@ -67,7 +70,7 @@ module.exports = async ({ testPath }) => {
 
   return pass({
     start,
-    end: +new Date(),
+    end,
     numPassed,
     test: {
       path: testPath,

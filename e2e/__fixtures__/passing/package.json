@@ -1,0 +1,6 @@
+{
+  "jest": {
+    "runner": "../../../src/",
+    "testMatch": ["**/*.test.ts"]
+  }
+}
