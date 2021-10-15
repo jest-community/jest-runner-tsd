@@ -1,6 +1,4 @@
-// @ts-check
-
-const { dirname, join, relative } = require('path');
+const { dirname, join, posix, relative, sep } = require('path');
 const { readFileSync } = require('graceful-fs');
 const { parse } = require('jest-docblock');
 const tsd = require('mlh-tsd');
@@ -18,33 +16,39 @@ const resolveTypingsFile = testPath => {
     type = type[0];
   }
 
-  return join(dirname(testPath), type || '.');
+  if (type === undefined) {
+    return '';
+  }
+
+  return join(dirname(testPath), type);
 };
 
+/**
+ * @param {string} input
+ */
+const toGlob = input => input.split(sep).join(posix.sep);
+
 module.exports = async ({ testPath }) => {
-  const testFile = relative(process.cwd(), testPath);
-  const typingsFile = relative(process.cwd(), resolveTypingsFile(testPath));
+  const testFile = relative('', testPath);
+  const typingsFile = relative('', resolveTypingsFile(testPath)) || '.';
 
   const start = Date.now();
 
-  const extendedDiagnostics = await tsd.default({
+  const { diagnostics, numTests } = await tsd.default({
     cwd: process.cwd(),
-    testFiles: [testFile],
+    testFiles: [toGlob(testFile)],
     typingsFile,
   });
 
   const end = Date.now();
 
-  const numTests = extendedDiagnostics.numTests;
-  const numFailed = extendedDiagnostics.diagnostics.length;
+  const numFailed = diagnostics.length;
   const numPassed = numTests - numFailed;
-
-  const failedTests = extendedDiagnostics.diagnostics;
 
   if (numFailed > 0) {
     let errorMessage = [];
 
-    failedTests.forEach(test => {
+    diagnostics.forEach(test => {
       errorMessage.push(
         `${testFile}:${test.line}:${test.column} - ${test.severity} - ${test.message}`
       );
