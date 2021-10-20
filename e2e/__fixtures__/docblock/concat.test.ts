@@ -1,5 +1,5 @@
 /**
- * @type ./concat.d.ts
+ * @type concat.d.ts
  */
 
 import { expectType } from 'mlh-tsd';

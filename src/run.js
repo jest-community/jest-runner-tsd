@@ -6,36 +6,37 @@ const { pass } = require('./pass');
 const { fail } = require('./fail');
 
 /**
- * @param {string} testPath
+ * @param {string} rootDir
+ * @param {string} testFile
  */
-const resolveTypingsFile = testPath => {
-  const fileContents = readFileSync(testPath, 'utf8');
+function resolveTypingsFile(rootDir, testFile) {
+  const fileContents = readFileSync(join(rootDir, testFile), 'utf8');
   let { type } = parse(fileContents);
 
   if (Array.isArray(type)) {
     type = type[0];
   }
 
-  if (type === undefined) {
-    return '';
+  if (type !== undefined) {
+    return join(dirname(testFile), type);
   }
 
-  return join(dirname(testPath), type);
-};
+  return undefined;
+}
 
 /**
  * @param {string} input
  */
 const normalizeSlashes = input => input.split(sep).join(posix.sep);
 
-module.exports = async ({ testPath }) => {
-  const testFile = relative('', testPath);
-  const typingsFile = relative('', resolveTypingsFile(testPath)) || '.';
+module.exports = async ({ config: { rootDir }, testPath }) => {
+  const testFile = relative(rootDir, testPath);
+  const typingsFile = resolveTypingsFile(rootDir, testFile);
 
   const start = Date.now();
 
   const { diagnostics, numTests } = await tsd.default({
-    cwd: process.cwd(),
+    cwd: rootDir,
     testFiles: [normalizeSlashes(testFile)],
     typingsFile,
   });
@@ -60,7 +61,7 @@ module.exports = async ({ testPath }) => {
       start,
       end,
       test: {
-        path: testPath,
+        path: testFile,
       },
       numFailed,
       numPassed,
@@ -73,7 +74,7 @@ module.exports = async ({ testPath }) => {
     end,
     numPassed,
     test: {
-      path: testPath,
+      path: testFile,
     },
   });
 };
