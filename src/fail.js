@@ -19,9 +19,8 @@ module.exports.fail = ({
 
   return toTestResult({
     stats,
-    title: 'Type Checks',
-    errorMessage: errorMessage.join('\n'),
-    tests: [{ duration: end - start, ...test }],
+    errorMessage,
+    tests: [{ duration: end - start, ...test, errorMessage }],
     jestTestPath: test.path,
   });
 };
