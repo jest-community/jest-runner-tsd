@@ -1,13 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`works with failing test 1`] = `
+exports[`runs a test file with no assertions 1`] = `
 "FAIL ./index.test.ts
   ✕ tsd typecheck
   ● tsd typecheck
     Argument of type 'number' is not assignable to parameter of type 'string'.
-    > 5 | expectType<string>(concat(1, 2));
-        |                    ^
-      at index.test.ts:5:20
+    > 4 | concat(1, 2);
+        |        ^
+      at index.test.ts:4:8
+    Expected 2 arguments, but got 1.
+    > 5 | concat([1, 2]);
+        | ^
+      at index.test.ts:5:1
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total

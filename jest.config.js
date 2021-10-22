@@ -5,5 +5,5 @@ module.exports = {
       testMatch: ['<rootDir>/e2e/*.test.ts'],
     },
   ],
-  testTimeout: 30000,
+  testTimeout: 60000,
 };

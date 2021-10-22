@@ -1,10 +1,9 @@
 const { dirname, join, posix, relative, sep } = require('path');
+const { fail, pass } = require('create-jest-runner');
 const { readFileSync } = require('graceful-fs');
 const { parse } = require('jest-docblock');
-const tsd = require('mlh-tsd');
+const tsd = require('tsd');
 const formatErrorMessage = require('./formatErrorMessage');
-const { pass } = require('./pass');
-const { fail } = require('./fail');
 
 const TEST_TITLE = 'tsd typecheck';
 
@@ -39,16 +38,13 @@ module.exports = async ({ config: { rootDir }, testPath }) => {
 
   const start = Date.now();
 
-  const { diagnostics, numTests } = await tsd.default({
+  const diagnostics = await tsd.default({
     cwd: rootDir,
     testFiles: [normalizeSlashes(testFile)],
     typingsFile,
   });
 
   const end = Date.now();
-
-  const numFailed = diagnostics.length;
-  const numPassed = numTests - numFailed;
 
   if (diagnostics.length > 0) {
     const errorMessage = formatErrorMessage(diagnostics, testFileContents);
@@ -57,8 +53,6 @@ module.exports = async ({ config: { rootDir }, testPath }) => {
       start,
       end,
       test: { path: testFile, title: TEST_TITLE },
-      numFailed,
-      numPassed,
       errorMessage,
     });
   }
@@ -66,7 +60,6 @@ module.exports = async ({ config: { rootDir }, testPath }) => {
   return pass({
     start,
     end,
-    numPassed,
     test: { path: testFile, title: TEST_TITLE },
   });
 };
