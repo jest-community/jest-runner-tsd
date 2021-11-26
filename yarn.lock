@@ -2464,13 +2464,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^4.0.0, chalk@npm:^4.1.0, chalk@npm:^4.1.2":
+"chalk@npm:^4.0.0, chalk@npm:^4.1.0":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
     ansi-styles: ^4.1.0
     supports-color: ^7.1.0
   checksum: e3901b97d953991712bf0b941d586175be7ca5da56a97d25187e07453c6b26cae0ac8d9c7aa9e87e7c5c986fff870771b3a8e2705b3becda868829e2e12c2a65
+  languageName: node
+  linkType: hard
+
+"chalk@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "chalk@npm:5.0.0"
+  checksum: 11db07d2b78399a97023fa39c5fb32e9aa66d6d92bac0fa0b4b61171543f551e16c23e2a18b4bfe0a5d592190d213c19c0ef22c5430de28a1741dbe945ecab37
   languageName: node
   linkType: hard
 
@@ -4395,7 +4402,7 @@ fsevents@^2.3.2:
     "@typescript-eslint/eslint-plugin": ^4.33.0
     "@typescript-eslint/parser": ^4.33.0
     babel-jest: ^27.2.5
-    chalk: ^4.1.2
+    chalk: ^5.0.0
     create-jest-runner: ^0.9.0
     eslint: ^7.32.0
     eslint-config-prettier: ^8.3.0
