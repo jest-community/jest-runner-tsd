@@ -18,24 +18,24 @@ const NOT_EMPTY_LINE_REGEXP = /^(?!$)/gm;
 const indentAllLines = (lines, indent) =>
   lines.replace(NOT_EMPTY_LINE_REGEXP, indent);
 
-module.exports = (diagnostics, fileContents) => {
+module.exports = diagnostics => {
   const title = chalk.bold.red(TITLE_INDENT + BULLET + 'tsd typecheck') + '\n';
 
   const messages = [];
 
   diagnostics.forEach(error => {
-    const { column, fileName, line, message } = error;
+    const { column, fileName, fileText, line, message } = error;
 
     const codeFrame = codeFrameColumns(
-      fileContents,
-      { start: { column: column + 1, line } },
+      fileText,
+      { start: { column, line } },
       { highlightCode: true, linesAbove: 0, linesBelow: 0 }
     );
 
     const location =
       chalk.dim('at ') +
       chalk.cyan(basename(fileName)) +
-      chalk.dim(':' + line + ':' + (column + 1));
+      chalk.dim(':' + line + ':' + column);
 
     messages.push(
       indentAllLines(message, MESSAGE_INDENT) +

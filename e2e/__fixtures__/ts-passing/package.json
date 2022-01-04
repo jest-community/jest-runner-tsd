@@ -1,5 +1,4 @@
 {
-  "types": "./types.d.ts",
   "jest": {
     "runner": "../../../src/",
     "testMatch": ["**/*.test.ts"]
