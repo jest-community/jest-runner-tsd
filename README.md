@@ -1,84 +1,61 @@
-# `jest-runner-tsd`
+# jest-runner-tsd
 
-A Jest runner that tests typescript typings using [tsd](https://github.com/SamVerschueren/tsd) under the hood.
+> Run your TypeScript type tests using Jest.
+
+[![version](https://img.shields.io/npm/v/jest-runner-tsd.svg)](https://npmjs.com/package/jest-runner-tsd)
+[![license](https://img.shields.io/github/license/jest-community/jest-runner-tsd.svg)](https://github.com/jest-community/jest-runner-tsd/blob/main/LICENSE.md)
+
+Note that since `v2` the `jest-runner-tsd` is using [`tsd-lite`](https://github.com/mrazauskas/tsd-lite) instead of [`tsd`](https://github.com/SamVerschueren/tsd). The type testing logic is the same in both implementations, i.e. both of them are wrapping around the [TypeScript compiler](https://github.com/microsoft/TypeScript/wiki/Using-the-Compiler-API) to analyze types of your code.
+
+## Differences from `tsd`
+
+The usage of `tsd` with monorepos written in TypeScript may become [cumbersome](https://github.com/SamVerschueren/tsd/issues/32), because of checks unrelated with types. `tsd-light` is an attempt to address these and similar issues.
+
+Notable differences:
+
+- The `tsd` configuration in `package.json` is ignored. Please use `jest.config` to configure discovery of your test files and `tsconfig.json` to provide configuration for TS compiler.
+- The compiler configuration will be read from the nearest `tsconfig.json` for each test file. Hence, you may have a configuration for the whole project, or a group of test files, or just a particular test file.
+- `tsd-lite` will use the default TS compiler configuration without altering it. This means you should set `"strict": true` to use strict assertions, which are the default ones in vanilla `tsd`.
+- Only type testing is performed without any additional checks or rules.
+- The `printType` helper is discarded.
 
 ## Install
 
-Install `jest-runner-tsd`
-
 ```bash
-yarn add --dev jest-runner-tsd
-
-# or with NPM
-
-npm install --save-dev jest-runner-tsd
+yarn add -D jest-runner-tsd @tsd/typescript
 ```
 
-### Adding to Jest Config
+Remember to install `@tsd/typescript` package. It is a required peer dependency.
 
-Create a `jest.config.types.js` file and have the runner property set to `jest-runner-tsd` as shown below:
+### Usage
+
+1. If your type tests live inside `__typetests__` folders, set up `jest.config.tsd.js` like this:
 
 ```js
 module.exports = {
+  displayName: {
+    color: 'blue',
+    name: 'types',
+  },
   runner: 'jest-runner-tsd',
+  testMatch: ['**/__typetests__/**/*.test.ts'],
 };
 ```
 
-In the project `package.json` file, modify the scripts block to use the configuration file as show below:
+2. Add [`tsconfig.json`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) to your project with configuration for TS compiler.
+
+3. Run `yarn jest -c jest.config.tsd.js` command or just include a script in `package.json`:
 
 ```json
-...
 "scripts": {
-  ...
-  "type-tests": "yarn jest --config jest.config.types.js"
-}
-...
-```
-
-### Run
-
-To start the test, just execute the following command
-
-```bash
-yarn test-types
-```
-
-## Writing tests
-
-> This runner uses TSD. To see the available assertions, checkout it's [documentation](https://github.com/SamVerschueren/tsd)
-
-### For JavaScript Projects
-
-There are multiple ways you can pass a type definition file.
-
-#### Default
-
-The type definitions should be in a file named `index.d.ts` in the root directory of the project by default.
-
-#### `types` property in package.json
-
-You can also set your `types` property in package.json. The runner will automatically pick the type defintion file from there.
-
-```json
-{
-  ...
-  "types": "path/to/types.d.ts"
+  "test:types": "jest -c jest.config.tsd.js"
 }
 ```
 
-#### Docblocks
+## Tests
 
-If the type definition file is located somewhere else then specify its path in the top of respective test file using the `@type` inside a docblock.
+To learn more about `tsd` tests and assertions see the [documentation](https://github.com/SamVerschueren/tsd).
 
-```ts
-/**
- * @type ../../custom/path/to/types.d.ts
- **/
-```
+## License
 
-### For TypeScript Projects
-
-> **Note:** This is only a workaround. A stable solution may be introduced in future.
-
-Due to [limitations in TSD](https://github.com/SamVerschueren/tsd/issues/32), the only solution now for testing types in TypeScript projects
-would be to have a empty type definition file and specify it's path using one of the many methods explained above.
+[MIT](https://github.com/jest-community/jest-runner-tsd/blob/main/LICENSE.md) © Jest Community
