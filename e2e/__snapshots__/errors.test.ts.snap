@@ -11,7 +11,6 @@ exports[`throws if nearest tsconfig.json is not valid 1`] = `
     > 5 |     \\"strict\\": \\"yes\\",
         |               ^
     at e2e/__fixtures__/errors-tsconfig/tsconfig.json:5:15
-    No inputs were found in config file '/mocked-path-to-jest-runner-tsd/e2e/__fixtures__/errors-tsconfig/tsconfig.json'. Specified 'include' paths were '[\\"./src/**/*\\"]' and 'exclude' paths were '[]'.
 Test Suites: 1 failed, 1 total
 Tests:       0 total
 Snapshots:   0 total
