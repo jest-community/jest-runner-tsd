@@ -1,22 +1,28 @@
 const tsdLite = require('tsd-lite');
-const formatErrorMessage = require('./formatErrorMessage');
-const { pass } = require('./pass');
+const { formatTsdErrors, formatTsdResults } = require('./formatter');
 const { fail } = require('./fail');
+const { pass } = require('./pass');
 
 const TEST_TITLE = 'tsd typecheck';
 
 module.exports = async ({ testPath }) => {
   const start = Date.now();
 
-  const { assertionCount, diagnostics } = tsdLite.default(testPath);
+  const { assertionsCount, tsdErrors, tsdResults } = tsdLite.default(testPath);
 
   const end = Date.now();
 
-  const numFailed = diagnostics.length;
-  const numPassed = assertionCount - numFailed;
+  if (tsdErrors !== undefined) {
+    const message = formatTsdErrors(tsdErrors);
 
-  if (diagnostics.length > 0) {
-    const errorMessage = formatErrorMessage(diagnostics);
+    throw { message, stack: '' };
+  }
+
+  const numFailed = tsdResults.length;
+  const numPassed = assertionsCount - numFailed;
+
+  if (tsdResults.length > 0) {
+    const errorMessage = formatTsdResults(tsdResults);
 
     return fail({
       start,

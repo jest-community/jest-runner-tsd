@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "module": "random",
+    "target": "es2019",
+    "strict": "yes",
+    "noEmitOnError": true
+  },
+  "include": ["./src/**/*"]
+}
