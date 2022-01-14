@@ -6,11 +6,11 @@ exports[`throws if nearest tsconfig.json is not valid 1`] = `
     Argument for '--module' option must be: 'none', 'commonjs', 'amd', 'system', 'umd', 'es6', 'es2015', 'es2020', 'es2022', 'esnext', 'node12', 'nodenext'.
     > 3 |     \\"module\\": \\"random\\",
         |               ^
-    at e2e/__fixtures__/errors-tsconfig/tsconfig.json:3:15
+      at e2e/__fixtures__/errors-tsconfig/tsconfig.json:3:15
     Compiler option 'strict' requires a value of type boolean.
     > 5 |     \\"strict\\": \\"yes\\",
         |               ^
-    at e2e/__fixtures__/errors-tsconfig/tsconfig.json:5:15
+      at e2e/__fixtures__/errors-tsconfig/tsconfig.json:5:15
 Test Suites: 1 failed, 1 total
 Tests:       0 total
 Snapshots:   0 total
@@ -25,11 +25,11 @@ exports[`throws if syntax error is encountered 1`] = `
     SyntaxError: ')' expected.
     > 4 | expectError(one('foo', 'bar');
         |                              ^
-    at e2e/__fixtures__/errors-syntax/index.test.ts:4:30
+      at e2e/__fixtures__/errors-syntax/index.test.ts:4:30
     SyntaxError: ',' expected.
     > 5 | expectError(one('foo' 'bar'));
         |                       ^
-    at e2e/__fixtures__/errors-syntax/index.test.ts:5:23
+      at e2e/__fixtures__/errors-syntax/index.test.ts:5:23
 Test Suites: 1 failed, 1 total
 Tests:       0 total
 Snapshots:   0 total

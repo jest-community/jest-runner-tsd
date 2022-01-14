@@ -38,18 +38,18 @@ function getCodeFrameAndLocation(file, start) {
     chalk.cyan(normalizeSlashes(relative('', file.fileName))) +
     chalk.dim(':' + (line + 1) + ':' + (character + 1));
 
-  return { codeFrame, location };
+  return [codeFrame, indentEachLine(location, 1)].join('\n\n');
 }
 
 module.exports.formatTsdErrors = tsdErrors => {
   const messages = tsdErrors.map(error => {
     if (error.file) {
-      const { codeFrame, location } = getCodeFrameAndLocation(
+      const codeFrameAndLocation = getCodeFrameAndLocation(
         error.file,
         error.start
       );
 
-      return [error.message, codeFrame, location].join('\n\n');
+      return [error.message, codeFrameAndLocation].join('\n\n');
     }
 
     return error.message;
@@ -62,16 +62,19 @@ module.exports.formatTsdResults = tsdResults => {
   const title = chalk.bold.red(makeTitle('tsd typecheck'));
 
   const messages = tsdResults.map(result => {
-    const { codeFrame, location } = getCodeFrameAndLocation(
-      result.file,
-      result.start
-    );
+    if (result.file) {
+      const codeFrameAndLocation = getCodeFrameAndLocation(
+        result.file,
+        result.start
+      );
 
-    return [
-      indentEachLine(result.message, 2),
-      indentEachLine(codeFrame, 2),
-      indentEachLine(location, 3),
-    ].join('\n\n');
+      return [
+        indentEachLine(result.message, 2),
+        indentEachLine(codeFrameAndLocation, 2),
+      ].join('\n\n');
+    }
+
+    return indentEachLine(result.message, 2);
   });
 
   return [title, messages.join('\n\n'), ''].join('\n');
