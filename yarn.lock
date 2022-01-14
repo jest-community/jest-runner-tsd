@@ -3968,7 +3968,7 @@ fsevents@^2.3.2:
     execa: ^5.1.1
     jest: ^27.2.5
     prettier: ^2.4.1
-    tsd-lite: ^0.2.0
+    tsd-lite: ^0.3.0
     typescript: ^4.4.4
   peerDependencies:
     "@tsd/typescript": ^3.8.3 || ^4.0.7
@@ -5554,12 +5554,12 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"tsd-lite@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "tsd-lite@npm:0.2.0"
+"tsd-lite@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "tsd-lite@npm:0.3.0"
   peerDependencies:
     "@tsd/typescript": ^3.8.3 || ^4.0.7
-  checksum: 4bd2b883cda48bea22225bceadfd268511e143a9c9d6a86e8e8a6d7ef9e5b055a6046b2e7348cbb6a7739297d84f75ca227d81966599ff62c1c12c6d12eea8df
+  checksum: 327bd343020ea3265e585d0ab977fab1274baddfb862b76fa22710babefb0a12f91a89bae1ada795455d72e53eda826872c2d91b7931d22e687813113ccc88fd
   languageName: node
   linkType: hard
 
