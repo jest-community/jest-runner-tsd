@@ -3,7 +3,7 @@
 exports[`throws if nearest tsconfig.json is not valid 1`] = `
 "FAIL e2e/__fixtures__/errors-tsconfig/index.test.ts
   ● Test suite failed to run
-    Argument for '--module' option must be: 'none', 'commonjs', 'amd', 'system', 'umd', 'es6', 'es2015', 'es2020', 'esnext'.
+    Argument for '--module' option must be: 'none', 'commonjs', 'amd', 'system', 'umd', 'es6', 'es2015', 'es2020', 'es2022', 'esnext', 'node12', 'nodenext'.
     > 3 |     \\"module\\": \\"random\\",
         |               ^
     at e2e/__fixtures__/errors-tsconfig/tsconfig.json:3:15
