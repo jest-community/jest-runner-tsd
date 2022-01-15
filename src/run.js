@@ -5,7 +5,7 @@ const { pass } = require('./pass');
 
 const TEST_TITLE = 'tsd typecheck';
 
-module.exports = async ({ testPath }) => {
+module.exports = ({ testPath }) => {
   const start = Date.now();
 
   const { assertionsCount, tsdErrors, tsdResults } = tsdLite.default(testPath);
