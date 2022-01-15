@@ -1627,13 +1627,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsd/typescript@npm:^4.5.4":
-  version: 4.5.4
-  resolution: "@tsd/typescript@npm:4.5.4"
+"@tsd/typescript@npm:~4.4.4":
+  version: 4.4.4
+  resolution: "@tsd/typescript@npm:4.4.4"
   bin:
     tsc: typescript/bin/tsc
     tsserver: typescript/bin/tsserver
-  checksum: 7f81f8c627a11a46512fe555f7d8006921a468ccf4324c0b457fe26281b478cd6d416684a5d94e458dfab0f614a1c21f68c4421b087f415fd4653662d4138115
+  checksum: 3f1d69f12917f1e685b4cc15eba18b4d000e076092aff27228d6d47a631d2267c431914cf1061d2d5d052112d5a74071830a568e0a396a0aa6e608fb30b016f0
   languageName: node
   linkType: hard
 
@@ -3956,7 +3956,7 @@ fsevents@^2.3.2:
     "@babel/core": ^7.15.8
     "@babel/preset-env": ^7.15.8
     "@babel/preset-typescript": ^7.15.0
-    "@tsd/typescript": ^4.5.4
+    "@tsd/typescript": ~4.4.4
     "@typescript-eslint/eslint-plugin": ^4.33.0
     "@typescript-eslint/parser": ^4.33.0
     babel-jest: ^27.2.5
@@ -3969,7 +3969,7 @@ fsevents@^2.3.2:
     jest: ^27.2.5
     prettier: ^2.4.1
     tsd-lite: ^0.3.0
-    typescript: ^4.4.4
+    typescript: ~4.4.4
   peerDependencies:
     "@tsd/typescript": ^3.8.3 || ^4.0.7
   languageName: unknown
@@ -5629,23 +5629,23 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-typescript@^4.4.4:
-  version: 4.4.4
-  resolution: "typescript@npm:4.4.4"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 8c5455b860a69f05d4730f54bcd0c380dae34bb1ae1b0d6ac5f16fb9d3c445834dff563eccc8c970cd15e7c9d2aa8183851a0d35d62bac1e24260bf805c23af4
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@^4.4.4#builtin<compat/typescript>":
+"typescript@patch:typescript@~4.4.4#builtin<compat/typescript>":
   version: 4.4.4
   resolution: "typescript@patch:typescript@npm%3A4.4.4#builtin<compat/typescript>::version=4.4.4&hash=8133ad"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: d1c6c0a705893112dc19979fa58dd96b1b9395bf4cb9b013bdfe4badb31320c39187f2ff6088568e6742b66624c1bcf49c8d7ef1f443fbd64d4225752c09f065
+  languageName: node
+  linkType: hard
+
+typescript@~4.4.4:
+  version: 4.4.4
+  resolution: "typescript@npm:4.4.4"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 8c5455b860a69f05d4730f54bcd0c380dae34bb1ae1b0d6ac5f16fb9d3c445834dff563eccc8c970cd15e7c9d2aa8183851a0d35d62bac1e24260bf805c23af4
   languageName: node
   linkType: hard
 
