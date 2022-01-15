@@ -46,6 +46,8 @@ To compile each test file, `tsd-lite` will read the nearest [`tsconfig.json`](ht
 
 For example, if your project already includes a `tsconfig.json` in the root directory, but you prefer to have different configuration for testing, simply add another `tsconfig.json` to a directory with the test files. It may override or extend your root configuration.
 
+**Hint:** run `yarn tsc -p path/to/__typetests__ --showConfig` to print the configuration which applies to the test files.
+
 **Note:** if `tsconfig.json` is not found, the compiler will fall back to the default configuration.
 
 ### Optionally Strict
