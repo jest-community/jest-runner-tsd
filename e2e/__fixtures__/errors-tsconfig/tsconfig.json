@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "random",
+    "module": "commonjs",
     "target": "es2019",
     "strict": "yes",
     "noEmitOnError": true

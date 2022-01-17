@@ -1,5 +1,6 @@
 const { posix, relative, sep } = require('path');
 const { codeFrameColumns } = require('@babel/code-frame');
+const ts = require('@tsd/typescript');
 const chalk = require('chalk');
 
 const NOT_EMPTY_LINE_REGEXP = /^(?!$)/gm;
@@ -41,40 +42,19 @@ function getCodeFrameAndLocation(file, start) {
   return [codeFrame, indentEachLine(location, 1)].join('\n\n');
 }
 
-module.exports.formatTsdErrors = tsdErrors => {
-  const messages = tsdErrors.map(error => {
-    if (error.file) {
-      const codeFrameAndLocation = getCodeFrameAndLocation(
-        error.file,
-        error.start
-      );
-
-      return [error.message, codeFrameAndLocation].join('\n\n');
-    }
-
-    return error.message;
-  });
-
-  return messages.join('\n\n');
-};
-
 module.exports.formatTsdResults = tsdResults => {
   const title = chalk.bold.red(makeTitle('tsd typecheck'));
 
   const messages = tsdResults.map(result => {
-    if (result.file) {
-      const codeFrameAndLocation = getCodeFrameAndLocation(
-        result.file,
-        result.start
-      );
+    const message = ts.flattenDiagnosticMessageText(result.messageText, '\n');
 
-      return [
-        indentEachLine(result.message, 2),
-        indentEachLine(codeFrameAndLocation, 2),
-      ].join('\n\n');
-    }
+    const codeFrameAndLocation = result.file
+      ? getCodeFrameAndLocation(result.file, result.start)
+      : undefined;
 
-    return indentEachLine(result.message, 2);
+    return [indentEachLine(message, 2), indentEachLine(codeFrameAndLocation, 2)]
+      .filter(line => line !== undefined)
+      .join('\n\n');
   });
 
   return [title, messages.join('\n\n'), ''].join('\n');
