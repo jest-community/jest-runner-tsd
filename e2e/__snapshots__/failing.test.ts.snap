@@ -6,8 +6,8 @@ exports[`works with failing JS test 1`] = `
   ● tsd typecheck
     Argument of type 'number' is not assignable to parameter of type 'string'.
     > 5 | expectType<string>(concat(1, 2));
-        |                    ^
-      at e2e/__fixtures__/js-failing/index.test.ts:5:20
+        | ^
+      at e2e/__fixtures__/js-failing/index.test.ts:5:1
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 passed, 2 total
 Snapshots:   0 total
@@ -22,8 +22,8 @@ exports[`works with failing TS test 1`] = `
   ● tsd typecheck
     Argument of type 'Date' is not assignable to parameter of type 'string'.
     > 5 | expectType<string>(makeDate(5, 5, 5));
-        |                    ^
-      at e2e/__fixtures__/ts-failing/index.test.ts:5:20
+        | ^
+      at e2e/__fixtures__/ts-failing/index.test.ts:5:1
     Expected an error, but found none.
     > 7 | expectError(makeDate(1, 3, 6));
         | ^
