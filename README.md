@@ -16,7 +16,7 @@ Most important differences (for the full list see [`tsd-lite` repo](https://gith
 ## Install
 
 ```bash
-yarn add -D jest-runner-tsd @tsd/typescript
+yarn add --dev jest-runner-tsd @tsd/typescript
 # or
 npm install --save-dev jest-runner-tsd @tsd/typescript
 ```
