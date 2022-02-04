@@ -1,4 +1,4 @@
-# jest-runner-tsd
+# `jest-runner-tsd`
 
 > Run your TypeScript type tests using Jest.
 
@@ -17,15 +17,19 @@ Most important differences (for the full list see [`tsd-lite` repo](https://gith
 
 ```bash
 yarn add -D jest-runner-tsd @tsd/typescript
+# or
+npm install --save-dev jest-runner-tsd @tsd/typescript
 ```
 
 Remember to install `@tsd/typescript` package. It is a required peer dependency.
+
+Note that `@tsd/typescript` will be used to compile type tests. Generally it is recommended to match versions of `@tsd/typescript` and `typescript` in a project, but you may choose to test on different version too.
 
 ## Configuration
 
 ### Jest
 
-First of all, you should [configure Jest](https://jestjs.io/docs/configuration) to discover your test files. For example, if the files are suffix with `.test.ts` and live inside `__typetests__` directory, set up `jest.config.tsd.js` like this:
+First of all, you should [configure Jest](https://jestjs.io/docs/configuration) to discover your test files. For example, if the files have `.test.ts` suffix and live inside `__typetests__` directories, set up `jest.config.tsd.js` like this:
 
 ```js
 module.exports = {
@@ -40,7 +44,7 @@ module.exports = {
 
 ### TS Compiler
 
-Your test files will be compiled using the [TypeScript compiler](https://github.com/microsoft/TypeScript/wiki/Using-the-Compiler-API) (similarly to `tsc`), but, instead of emitting JS code, `tsd-lite` will analyze types and diagnostics returned by the compiler.
+Your test files will be compiled using the [TypeScript compiler](https://github.com/microsoft/TypeScript/wiki/Using-the-Compiler-API) (similar to `tsc`), but, instead of emitting JS code, `tsd-lite` will analyze types and diagnostics returned by the compiler.
 
 To compile each test file, `tsd-lite` will read the nearest [`tsconfig.json`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) and will pass the configuration to the compiler. Hence, you may have a configuration for the whole project, or a group of test files, or just a particular test file.
 
