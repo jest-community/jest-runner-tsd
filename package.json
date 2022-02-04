@@ -1,7 +1,19 @@
 {
   "name": "jest-runner-tsd",
   "version": "1.2.0",
-  "description": "A Jest runner that tests typescript typings using tsd under the hood",
+  "description": "Run your TypeScript type tests using Jest",
+  "keywords": [
+    "check",
+    "checker",
+    "easy",
+    "jest",
+    "runner",
+    "tests",
+    "tsd",
+    "typings",
+    "types",
+    "typescript"
+  ],
   "license": "MIT",
   "repository": "https://github.com/jest-community/jest-runner-tsd.git",
   "main": "src/index.js",
@@ -20,14 +32,13 @@
     "@babel/code-frame": "^7.15.8",
     "chalk": "^4.1.2",
     "create-jest-runner": "^0.9.0",
-    "graceful-fs": "^4.2.8",
-    "jest-docblock": "^27.0.6",
-    "mlh-tsd": "^0.14.1"
+    "tsd-lite": "^0.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
     "@babel/preset-typescript": "^7.15.0",
+    "@tsd/typescript": "~4.4.4",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
     "babel-jest": "^27.2.5",
@@ -37,7 +48,10 @@
     "execa": "^5.1.1",
     "jest": "^27.2.5",
     "prettier": "^2.4.1",
-    "typescript": "^4.4.4"
+    "typescript": "~4.4.4"
+  },
+  "peerDependencies": {
+    "@tsd/typescript": "^3.8.3 || ^4.0.7"
   },
   "prettier": {
     "arrowParens": "avoid",

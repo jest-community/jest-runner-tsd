@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`reads \`types\` property in package.json 1`] = `
-"PASS ./types.test.ts
+exports[`overrides "strict": true in tsconfig 1`] = `
+"PASS e2e/__fixtures__/override-tsconfig/index.test.ts
   ✓ tsd typecheck
 Test Suites: 1 passed, 1 total
-Tests:       2 passed, 2 total
+Tests:       1 passed, 1 total
 Snapshots:   0 total
 Time:
 Ran all test suites.

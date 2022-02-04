@@ -1,0 +1,4 @@
+.yarn
+build
+coverage
+e2e/__fixtures__/errors-syntax

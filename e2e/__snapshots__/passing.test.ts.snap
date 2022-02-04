@@ -1,7 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`works with passing test 1`] = `
-"PASS ./index.test.ts
+exports[`works with passing JS test 1`] = `
+"PASS e2e/__fixtures__/js-passing/index.test.ts
+  ✓ tsd typecheck
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:
+Ran all test suites.
+"
+`;
+
+exports[`works with passing TS test 1`] = `
+"PASS e2e/__fixtures__/ts-passing/index.test.ts
   ✓ tsd typecheck
 Test Suites: 1 passed, 1 total
 Tests:       2 passed, 2 total

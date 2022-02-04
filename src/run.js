@@ -1,62 +1,27 @@
-const { dirname, join, posix, relative, sep } = require('path');
-const { readFileSync } = require('graceful-fs');
-const { parse } = require('jest-docblock');
-const tsd = require('mlh-tsd');
-const formatErrorMessage = require('./formatErrorMessage');
-const { pass } = require('./pass');
+const tsdLite = require('tsd-lite');
+const { formatTsdResults } = require('./formatter');
 const { fail } = require('./fail');
+const { pass } = require('./pass');
 
 const TEST_TITLE = 'tsd typecheck';
 
-/**
- * @param {string} testFile
- * @param {string} fileContents
- */
-function resolveTypingsFile(testFile, fileContents) {
-  let { type } = parse(fileContents);
-
-  if (Array.isArray(type)) {
-    type = type[0];
-  }
-
-  if (type !== undefined) {
-    return join(dirname(testFile), type);
-  }
-
-  return undefined;
-}
-
-/**
- * @param {string} input
- */
-const normalizeSlashes = input => input.split(sep).join(posix.sep);
-
-module.exports = async ({ config: { rootDir }, testPath }) => {
-  const testFileContents = readFileSync(testPath, 'utf8');
-
-  const testFile = relative(rootDir, testPath);
-  const typingsFile = resolveTypingsFile(testFile, testFileContents);
-
+module.exports = ({ testPath }) => {
   const start = Date.now();
 
-  const { diagnostics, numTests } = await tsd.default({
-    cwd: rootDir,
-    testFiles: [normalizeSlashes(testFile)],
-    typingsFile,
-  });
+  const { assertionsCount, tsdResults } = tsdLite.default(testPath);
 
   const end = Date.now();
 
-  const numFailed = diagnostics.length;
-  const numPassed = numTests - numFailed;
+  const numFailed = tsdResults.length;
+  const numPassed = assertionsCount - numFailed;
 
-  if (diagnostics.length > 0) {
-    const errorMessage = formatErrorMessage(diagnostics, testFileContents);
+  if (tsdResults.length > 0) {
+    const errorMessage = formatTsdResults(tsdResults);
 
     return fail({
       start,
       end,
-      test: { path: testFile, title: TEST_TITLE },
+      test: { path: testPath, title: TEST_TITLE },
       numFailed,
       numPassed,
       errorMessage,
@@ -67,6 +32,6 @@ module.exports = async ({ config: { rootDir }, testPath }) => {
     start,
     end,
     numPassed,
-    test: { path: testFile, title: TEST_TITLE },
+    test: { path: testPath, title: TEST_TITLE },
   });
 };
