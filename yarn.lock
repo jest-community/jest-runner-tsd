@@ -2530,9 +2530,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"create-jest-runner@npm:^0.9.0":
-  version: 0.9.0
-  resolution: "create-jest-runner@npm:0.9.0"
+"create-jest-runner@npm:^0.10.0":
+  version: 0.10.0
+  resolution: "create-jest-runner@npm:0.10.0"
   dependencies:
     chalk: ^4.1.0
     jest-worker: ^27.0.6
@@ -2550,7 +2550,7 @@ __metadata:
       optional: true
   bin:
     create-jest-runner: generator/index.js
-  checksum: 50948976f47b36a675d9e1407443d4cbf16277d84a701e8b4c15739f39a190b8ea350203e5eab8e956fc56f02af30a1002cc36058408ddddf1f22d0d52c240a3
+  checksum: 4d4087acc7a8e6395e01a77a40df1810ed9794b690cbd6cf1d76f869c511b2e842a7a091c05752154b116cc4addd7badd092153474840373f106916c1ef802d8
   languageName: node
   linkType: hard
 
@@ -3989,7 +3989,7 @@ __metadata:
     "@typescript-eslint/parser": ^5.0.0
     babel-jest: ^27.2.5
     chalk: ^4.1.2
-    create-jest-runner: ^0.9.0
+    create-jest-runner: ^0.10.0
     eslint: ^8.0.0
     eslint-config-prettier: ^8.3.0
     eslint-plugin-prettier: ^4.0.0
