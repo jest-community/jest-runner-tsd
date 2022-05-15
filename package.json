@@ -18,7 +18,8 @@
   "repository": "https://github.com/jest-community/jest-runner-tsd.git",
   "main": "src/index.js",
   "files": [
-    "src"
+    "src/",
+    "!src/__tests__/"
   ],
   "contributors": [
     "Karan Sanjeev Nair <yo@alphaman.me> (https://alphaman.me)",
