@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pass 1`] = `
+Object {
+  "console": null,
+  "failureMessage": undefined,
+  "numFailingTests": 0,
+  "numPassingTests": 5,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "perfStats": Object {
+    "end": 1200,
+    "start": 0,
+  },
+  "skipped": undefined,
+  "snapshot": Object {
+    "added": 0,
+    "fileDeleted": false,
+    "matched": 0,
+    "unchecked": 0,
+    "unmatched": 0,
+    "updated": 0,
+  },
+  "sourceMaps": Object {},
+  "testExecError": null,
+  "testFilePath": "/path/to/e2e/__fixtures__/js-passing/index.test.ts",
+  "testResults": Array [
+    Object {
+      "ancestorTitles": Array [],
+      "duration": 1200,
+      "failureMessages": Array [],
+      "fullName": undefined,
+      "numPassingAsserts": 0,
+      "status": "passed",
+      "title": "tsd typecheck",
+    },
+  ],
+}
+`;

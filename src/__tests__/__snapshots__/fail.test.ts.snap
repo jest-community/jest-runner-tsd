@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fails 1`] = `
+Object {
+  "console": null,
+  "failureMessage": "  ● tsd typecheck
+
+  Argument of type 'number' is not assignable to parameter of type 'string'.
+
+  > 5 | expectType<string>(concat(1, 2));
+      | ^
+
+    at e2e/__fixtures__/js-failing/index.test.ts:5:1",
+  "numFailingTests": 1,
+  "numPassingTests": 3,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "perfStats": Object {
+    "end": 1200,
+    "start": 0,
+  },
+  "skipped": undefined,
+  "snapshot": Object {
+    "added": 0,
+    "fileDeleted": false,
+    "matched": 0,
+    "unchecked": 0,
+    "unmatched": 0,
+    "updated": 0,
+  },
+  "sourceMaps": Object {},
+  "testExecError": null,
+  "testFilePath": "/path/to/e2e/__fixtures__/js-failing/index.test.ts",
+  "testResults": Array [
+    Object {
+      "ancestorTitles": Array [],
+      "duration": 1200,
+      "failureMessages": Array [
+        "  ● tsd typecheck
+
+  Argument of type 'number' is not assignable to parameter of type 'string'.
+
+  > 5 | expectType<string>(concat(1, 2));
+      | ^
+
+    at e2e/__fixtures__/js-failing/index.test.ts:5:1",
+      ],
+      "fullName": undefined,
+      "numPassingAsserts": 1,
+      "status": "failed",
+      "title": "tsd typecheck",
+    },
+  ],
+}
+`;
