@@ -2,7 +2,6 @@
 
 exports[`fails 1`] = `
 Object {
-  "console": null,
   "failureMessage": "  ● tsd typecheck
 
   Argument of type 'number' is not assignable to parameter of type 'string'.
@@ -11,30 +10,34 @@ Object {
       | ^
 
     at e2e/__fixtures__/js-failing/index.test.ts:5:1",
+  "leaks": false,
   "numFailingTests": 1,
   "numPassingTests": 3,
   "numPendingTests": 0,
   "numTodoTests": 0,
+  "openHandles": Array [],
   "perfStats": Object {
     "end": 1200,
+    "runtime": 1200,
+    "slow": false,
     "start": 0,
   },
-  "skipped": undefined,
+  "skipped": false,
   "snapshot": Object {
     "added": 0,
     "fileDeleted": false,
     "matched": 0,
     "unchecked": 0,
+    "uncheckedKeys": Array [],
     "unmatched": 0,
     "updated": 0,
   },
-  "sourceMaps": Object {},
-  "testExecError": null,
   "testFilePath": "/path/to/e2e/__fixtures__/js-failing/index.test.ts",
   "testResults": Array [
     Object {
       "ancestorTitles": Array [],
       "duration": 1200,
+      "failureDetails": Array [],
       "failureMessages": Array [
         "  ● tsd typecheck
 
@@ -45,7 +48,7 @@ Object {
 
     at e2e/__fixtures__/js-failing/index.test.ts:5:1",
       ],
-      "fullName": undefined,
+      "fullName": "/path/to/e2e/__fixtures__/js-failing/index.test.ts",
       "numPassingAsserts": 1,
       "status": "failed",
       "title": "tsd typecheck",

@@ -5,6 +5,7 @@ const { pass } = require('./pass');
 
 const TEST_TITLE = 'tsd typecheck';
 
+/** @type {import('create-jest-runner').RunTest} */
 module.exports = ({ testPath }) => {
   const start = Date.now();
 
@@ -31,7 +32,7 @@ module.exports = ({ testPath }) => {
   return pass({
     start,
     end,
-    numPassed,
     test: { path: testPath, title: TEST_TITLE },
+    numPassed,
   });
 };
