@@ -1,4 +1,4 @@
-name: Unit tests
+name: Node CI
 
 on:
   push:
@@ -17,12 +17,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
       - uses: actions/setup-node@v3
         with:
           node-version: lts/*
           cache: yarn
-
       - name: Validate cache
         run: yarn
 
@@ -40,6 +38,20 @@ jobs:
       - name: run ESLint
         run: yarn lint
 
+  typecheck:
+    needs: prepare-yarn-cache
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: lts/*
+          cache: yarn
+      - name: install
+        run: yarn
+      - name: run tsc
+        run: yarn tsc
+
   test-node:
     name: Test on Node.js v${{ matrix.node-version }}
     needs: prepare-yarn-cache
@@ -56,8 +68,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: yarn
-      - name:
-          install
+      - name: install
         run: yarn
       - name: run tests
         run: yarn test
