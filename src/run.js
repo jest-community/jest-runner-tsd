@@ -41,8 +41,8 @@ module.exports = ({ testPath, config }) => {
   /** @type {string | null} */
   let failureMessage = null;
 
-  /** @type {TestCaseResult | null} */
-  let testResult = null;
+  /** @type {TestCaseResult | undefined} */
+  let testResult = undefined;
 
   if (numFailingTests) {
     failureMessage = formatTsdResults(tsdResults);
