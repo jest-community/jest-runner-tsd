@@ -15,13 +15,14 @@ import runTest from '../run';
 jest.mock('tsd-lite');
 jest.mock('../formatter.js');
 
+jest.mocked(formatTsdResults).mockReturnValue('<mocked failure message>');
+
 beforeEach(() => {
-  jest.mocked(formatTsdResults).mockReturnValue('<mocked failure message>');
   jest.spyOn(Date, 'now').mockReturnValueOnce(1000).mockReturnValueOnce(2800);
 });
 
 afterEach(() => {
-  jest.resetAllMocks();
+  jest.clearAllMocks();
 });
 
 const runOptions = { config: { slowTestThreshold: 5 } } as RunTestOptions;
