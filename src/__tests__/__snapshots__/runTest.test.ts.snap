@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`runs test with all failing results 1`] = `
+Object {
+  "failureMessage": "<mocked failure message>",
+  "leaks": false,
+  "numFailingTests": 2,
+  "numPassingTests": 0,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "openHandles": Array [],
+  "perfStats": Object {
+    "end": 2800,
+    "runtime": 1800,
+    "slow": false,
+    "start": 1000,
+  },
+  "skipped": false,
+  "snapshot": Object {
+    "added": 0,
+    "fileDeleted": false,
+    "matched": 0,
+    "unchecked": 0,
+    "uncheckedKeys": Array [],
+    "unmatched": 0,
+    "updated": 0,
+  },
+  "testFilePath": "/path/to/some/failing.test.ts",
+  "testResults": Array [
+    Object {
+      "ancestorTitles": Array [],
+      "duration": 1800,
+      "failureDetails": Array [],
+      "failureMessages": Array [
+        "<mocked failure message>",
+      ],
+      "fullName": "tsd typecheck",
+      "numPassingAsserts": 0,
+      "status": "failed",
+      "title": "tsd typecheck",
+    },
+  ],
+}
+`;
+
+exports[`runs test with all passing results 1`] = `
+Object {
+  "failureMessage": null,
+  "leaks": false,
+  "numFailingTests": 0,
+  "numPassingTests": 2,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "openHandles": Array [],
+  "perfStats": Object {
+    "end": 2800,
+    "runtime": 1800,
+    "slow": false,
+    "start": 1000,
+  },
+  "skipped": false,
+  "snapshot": Object {
+    "added": 0,
+    "fileDeleted": false,
+    "matched": 0,
+    "unchecked": 0,
+    "uncheckedKeys": Array [],
+    "unmatched": 0,
+    "updated": 0,
+  },
+  "testFilePath": "/path/to/some/passing.test.ts",
+  "testResults": Array [
+    Object {
+      "ancestorTitles": Array [],
+      "duration": 1800,
+      "failureDetails": Array [],
+      "failureMessages": Array [],
+      "fullName": "tsd typecheck",
+      "numPassingAsserts": 1,
+      "status": "passed",
+      "title": "tsd typecheck",
+    },
+  ],
+}
+`;
+
+exports[`runs test with empty results 1`] = `
+Object {
+  "failureMessage": null,
+  "leaks": false,
+  "numFailingTests": 0,
+  "numPassingTests": 0,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "openHandles": Array [],
+  "perfStats": Object {
+    "end": 2800,
+    "runtime": 1800,
+    "slow": false,
+    "start": 1000,
+  },
+  "skipped": false,
+  "snapshot": Object {
+    "added": 0,
+    "fileDeleted": false,
+    "matched": 0,
+    "unchecked": 0,
+    "uncheckedKeys": Array [],
+    "unmatched": 0,
+    "updated": 0,
+  },
+  "testFilePath": "/path/to/some/empty.test.ts",
+  "testResults": Array [],
+}
+`;
+
+exports[`runs test with some failing results 1`] = `
+Object {
+  "failureMessage": "<mocked failure message>",
+  "leaks": false,
+  "numFailingTests": 2,
+  "numPassingTests": 2,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "openHandles": Array [],
+  "perfStats": Object {
+    "end": 2800,
+    "runtime": 1800,
+    "slow": false,
+    "start": 1000,
+  },
+  "skipped": false,
+  "snapshot": Object {
+    "added": 0,
+    "fileDeleted": false,
+    "matched": 0,
+    "unchecked": 0,
+    "uncheckedKeys": Array [],
+    "unmatched": 0,
+    "updated": 0,
+  },
+  "testFilePath": "/path/to/some/failing.test.ts",
+  "testResults": Array [
+    Object {
+      "ancestorTitles": Array [],
+      "duration": 1800,
+      "failureDetails": Array [],
+      "failureMessages": Array [
+        "<mocked failure message>",
+      ],
+      "fullName": "tsd typecheck",
+      "numPassingAsserts": 0,
+      "status": "failed",
+      "title": "tsd typecheck",
+    },
+  ],
+}
+`;
