@@ -1,0 +1,48 @@
+diff --git a/build/index.d.ts b/build/index.d.ts
+index 312362e37bacea5650ff99f8cb8d2b95d90fe862..424af1ac1f4d2485875a4facd4993a26ea51580a 100644
+--- a/build/index.d.ts
++++ b/build/index.d.ts
+@@ -4,20 +4,26 @@
+  * This source code is licensed under the MIT license found in the
+  * LICENSE file in the root directory of this source tree.
+  */
+-import {createTestScheduler} from '@jest/core';
+-import {getVersion} from '@jest/core';
+-import {run} from 'jest-cli';
+-import {runCLI} from '@jest/core';
+-import {SearchSource} from '@jest/core';
+-
+-export {createTestScheduler};
+-
+-export {getVersion};
+-
+-export {run};
+-
+-export {runCLI};
+-
+-export {SearchSource};
+-
+-export {};
++export {
++  SearchSource,
++  createTestScheduler,
++  getVersion,
++  runCLI,
++} from "@jest/core";
++export { run } from "jest-cli";
++declare global {
++  const beforeEach: typeof import("@jest/globals")["beforeEach"];
++  const beforeAll: typeof import("@jest/globals")["beforeAll"];
++  const afterEach: typeof import("@jest/globals")["afterEach"];
++  const afterAll: typeof import("@jest/globals")["afterAll"];
++  const describe: typeof import("@jest/globals")["describe"];
++  const fdescribe: typeof import("@jest/globals")["fdescribe"];
++  const xdescribe: typeof import("@jest/globals")["xdescribe"];
++  const test: typeof import("@jest/globals")["test"];
++  const xtest: typeof import("@jest/globals")["xtest"];
++  const it: typeof import("@jest/globals")["it"];
++  const fit: typeof import("@jest/globals")["fit"];
++  const xit: typeof import("@jest/globals")["xit"];
++  const expect: typeof import("@jest/globals")["expect"];
++  const jest: typeof import("@jest/globals")["jest"];
++}

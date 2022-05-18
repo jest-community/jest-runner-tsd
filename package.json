@@ -27,7 +27,8 @@
   ],
   "scripts": {
     "lint": "eslint .",
-    "test": "jest"
+    "test": "jest",
+    "typecheck": "yarn tsc && yarn tsc -p e2e && yarn tsc -p src/__tests__"
   },
   "dependencies": {
     "@babel/code-frame": "^7.15.8",
@@ -49,7 +50,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "execa": "^5.1.1",
-    "jest": "^28.0.0",
+    "jest": "^28.1.0",
     "prettier": "^2.4.1",
     "typescript": "~4.6.0"
   },
@@ -60,5 +61,8 @@
     "arrowParens": "avoid",
     "singleQuote": true
   },
-  "packageManager": "yarn@3.2.1"
+  "packageManager": "yarn@3.2.1",
+  "resolutions": {
+    "jest@^28.1.0": "patch:jest@npm:28.1.0#.yarn/patches/jest-npm-28.1.0-3beb54c0f4.patch"
+  }
 }

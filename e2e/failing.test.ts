@@ -1,4 +1,3 @@
-import { expect, test } from '@jest/globals';
 import runJest from './runJest';
 
 test('works with failing JS test', async () => {

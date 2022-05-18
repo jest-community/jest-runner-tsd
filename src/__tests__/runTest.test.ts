@@ -1,11 +1,3 @@
-import {
-  afterEach,
-  beforeEach,
-  describe,
-  expect,
-  jest,
-  test,
-} from '@jest/globals';
 import type { RunTestOptions } from 'create-jest-runner';
 import tsdLite, { type TsdResult } from 'tsd-lite';
 import type ts from 'typescript';
@@ -13,9 +5,9 @@ import { formatTsdResults } from '../formatter';
 import runTest from '../run';
 
 jest.mock('tsd-lite');
-jest.mock('../formatter.js');
-
-jest.mocked(formatTsdResults).mockReturnValue('<mocked failure message>');
+jest.mock('../formatter.js', () => ({
+  formatTsdResults: jest.fn().mockReturnValue('<mocked failure message>'),
+}));
 
 beforeEach(() => {
   jest.spyOn(Date, 'now').mockReturnValueOnce(1000).mockReturnValueOnce(2800);

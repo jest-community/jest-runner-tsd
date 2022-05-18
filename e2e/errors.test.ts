@@ -1,4 +1,3 @@
-import { expect, test } from '@jest/globals';
 import runJest from './runJest';
 
 test('throws if syntax error is encountered', async () => {

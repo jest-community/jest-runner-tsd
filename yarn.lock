@@ -3833,7 +3833,7 @@ __metadata:
     eslint-config-prettier: ^8.3.0
     eslint-plugin-prettier: ^4.0.0
     execa: ^5.1.1
-    jest: ^28.0.0
+    jest: ^28.1.0
     prettier: ^2.4.1
     tsd-lite: ^0.5.4
     typescript: ~4.6.0
@@ -3987,7 +3987,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest@npm:^28.0.0":
+"jest@npm:28.1.0":
   version: 28.1.0
   resolution: "jest@npm:28.1.0"
   dependencies:
@@ -4002,6 +4002,24 @@ __metadata:
   bin:
     jest: bin/jest.js
   checksum: f025164c408cf5ddb6e74dac1e8cbaf94c1c31dd1c67aba4ceee5989b2d8a77886db8ed1fb88853b45cf194b14cd802b454bbbe6b278a1e2140250297dc100d3
+  languageName: node
+  linkType: hard
+
+"jest@patch:jest@npm:28.1.0#.yarn/patches/jest-npm-28.1.0-3beb54c0f4.patch::locator=jest-runner-tsd%40workspace%3A.":
+  version: 28.1.0
+  resolution: "jest@patch:jest@npm%3A28.1.0#.yarn/patches/jest-npm-28.1.0-3beb54c0f4.patch::version=28.1.0&hash=ec3d21&locator=jest-runner-tsd%40workspace%3A."
+  dependencies:
+    "@jest/core": ^28.1.0
+    import-local: ^3.0.2
+    jest-cli: ^28.1.0
+  peerDependencies:
+    node-notifier: ^8.0.1 || ^9.0.0 || ^10.0.0
+  peerDependenciesMeta:
+    node-notifier:
+      optional: true
+  bin:
+    jest: bin/jest.js
+  checksum: 0741ee4fd366da519a90482a9eb27823c5ba643465febceea90f21e6511557b0c981b7c80f34a153aa4261ce7ad3f1dd98fba28296ec5ff6b1275b3f710d964a
   languageName: node
   linkType: hard
 

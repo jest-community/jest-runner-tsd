@@ -1,10 +1,9 @@
 {
-  "extends": "../tsconfig.json",
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
     "esModuleInterop": true,
     "skipLibCheck": true,
     "types": ["jest"]
   },
-  "include": ["**/*"],
-  "exclude": ["__fixtures__"]
+  "include": ["**/*"]
 }
