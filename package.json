@@ -32,7 +32,7 @@
   "dependencies": {
     "@babel/code-frame": "^7.15.8",
     "chalk": "^4.1.2",
-    "create-jest-runner": "^0.11.1",
+    "create-jest-runner": "^0.11.2",
     "tsd-lite": "^0.5.4"
   },
   "devDependencies": {
