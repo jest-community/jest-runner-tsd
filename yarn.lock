@@ -2563,16 +2563,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"create-jest-runner@npm:^0.11.2":
-  version: 0.11.2
-  resolution: "create-jest-runner@npm:0.11.2"
+"create-jest-runner@npm:^0.12.0":
+  version: 0.12.0
+  resolution: "create-jest-runner@npm:0.12.0"
   dependencies:
     chalk: ^4.1.0
-    jest-worker: ^28.0.2
+    jest-worker: ^29.0.0
     throat: ^6.0.1
   peerDependencies:
-    "@jest/test-result": ^28.0.0
-    jest-runner: ^28.0.0
+    "@jest/test-result": ^28.0.0 || ^29.0.0
+    jest-runner: ^28.0.0 || ^29.0.0
   peerDependenciesMeta:
     "@jest/test-result":
       optional: true
@@ -2580,7 +2580,7 @@ __metadata:
       optional: true
   bin:
     create-jest-runner: generator/index.js
-  checksum: 8560610fd1649c38e2b14988dfb2fa650bd55b6fa2cdceabb00e7355ad5f39787a95ab0277d43d12162c2f7ecab8ae3e68dd3f0584d2d9dfca527b1b2d28fded
+  checksum: 0f10dc4a681a8ab83e414b26a8a27f7940a8f055ff76dbe92d2ae6fec5c56d7cfa143d3aca292b5558db21405c32256682c2d75aea418b2b35ba4315013e32ea
   languageName: node
   linkType: hard
 
@@ -3885,7 +3885,7 @@ __metadata:
     "@typescript-eslint/parser": ^5.0.0
     babel-jest: ^28.0.0
     chalk: ^4.1.2
-    create-jest-runner: ^0.11.2
+    create-jest-runner: ^0.12.0
     eslint: ^8.0.0
     eslint-config-prettier: ^8.3.0
     eslint-plugin-prettier: ^4.0.0
@@ -4033,7 +4033,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-worker@npm:^28.0.2, jest-worker@npm:^28.1.3":
+"jest-worker@npm:^28.1.3":
   version: 28.1.3
   resolution: "jest-worker@npm:28.1.3"
   dependencies:
@@ -4041,6 +4041,17 @@ __metadata:
     merge-stream: ^2.0.0
     supports-color: ^8.0.0
   checksum: e921c9a1b8f0909da9ea07dbf3592f95b653aef3a8bb0cbcd20fc7f9a795a1304adecac31eecb308992c167e8d7e75c522061fec38a5928ace0f9571c90169ca
+  languageName: node
+  linkType: hard
+
+"jest-worker@npm:^29.0.0":
+  version: 29.0.0
+  resolution: "jest-worker@npm:29.0.0"
+  dependencies:
+    "@types/node": "*"
+    merge-stream: ^2.0.0
+    supports-color: ^8.0.0
+  checksum: 1709958e10492e359a05ce16205974ed6af0c130faad4c8ba705bdeb749657c3f9e4d0b6436253164e94dfc919ff94429d92d649d16b24794fcdb79546831b17
   languageName: node
   linkType: hard
 
