@@ -1750,13 +1750,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsd/typescript@npm:~4.7.0":
-  version: 4.7.4
-  resolution: "@tsd/typescript@npm:4.7.4"
-  bin:
-    tsc: typescript/bin/tsc
-    tsserver: typescript/bin/tsserver
-  checksum: 1a84773cb4bb01898fb0b6011ec5c2fb3e3c91585ea009bbf9d525b46d40f1827417dfc5f7b1efdf534b111a5947b063ae04490d147bda37b038e1a7d264672d
+"@tsd/typescript@npm:~4.8.0":
+  version: 4.8.2
+  resolution: "@tsd/typescript@npm:4.8.2"
+  checksum: c193a64d2347ba7da7e426e41d9cf9186ad71e782be2404db8ead310b3975a17ad206e0ba5f2c60bf9d8714cbccd7fbebde0345f2dce1938c1d1a8168e23f6b7
   languageName: node
   linkType: hard
 
@@ -3882,7 +3879,7 @@ __metadata:
     "@babel/preset-env": ^7.15.8
     "@babel/preset-typescript": ^7.15.0
     "@jest/test-result": ^28.1.0
-    "@tsd/typescript": ~4.7.0
+    "@tsd/typescript": ~4.8.0
     "@types/babel__code-frame": ^7.0.3
     "@typescript-eslint/eslint-plugin": ^5.0.0
     "@typescript-eslint/parser": ^5.0.0
@@ -3895,8 +3892,8 @@ __metadata:
     execa: ^5.1.1
     jest: ^28.0.0
     prettier: ^2.4.1
-    tsd-lite: ^0.5.4
-    typescript: ~4.7.0
+    tsd-lite: ^0.6.0
+    typescript: ~4.8.0
   peerDependencies:
     "@tsd/typescript": ^3.8.3 || ^4.0.7
   languageName: unknown
@@ -5287,12 +5284,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsd-lite@npm:^0.5.4":
-  version: 0.5.6
-  resolution: "tsd-lite@npm:0.5.6"
+"tsd-lite@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "tsd-lite@npm:0.6.0"
   peerDependencies:
     "@tsd/typescript": ^3.8.3 || ^4.0.7
-  checksum: b4773258ba3e2acfcac0c133060b09de4af8fca8385888eb5483163b40b87c5ba30420afeef3f6914cbd72546d47578d27d3f6862bf2e399c62822d0b75a8f1f
+  checksum: 7b603092411b9bf940b350475a741ffa6c5f3aa15e723a55d30069a47d25cecbedd4172740d8b894e08688500ec826f7d82a6252ea49e9fbd483c85199e662f0
   languageName: node
   linkType: hard
 
@@ -5344,23 +5341,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:~4.7.0":
-  version: 4.7.4
-  resolution: "typescript@npm:4.7.4"
+"typescript@npm:~4.8.0":
+  version: 4.8.2
+  resolution: "typescript@npm:4.8.2"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 5750181b1cd7e6482c4195825547e70f944114fb47e58e4aa7553e62f11b3f3173766aef9c281783edfd881f7b8299cf35e3ca8caebe73d8464528c907a164df
+  checksum: 7f5b81d0d558c9067f952c7af52ab7f19c2e70a916817929e4a5b256c93990bf3178eccb1ac8a850bc75df35f6781b6f4cb3370ce20d8b1ded92ed462348f628
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@~4.7.0#~builtin<compat/typescript>":
-  version: 4.7.4
-  resolution: "typescript@patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=a1c5e5"
+"typescript@patch:typescript@~4.8.0#~builtin<compat/typescript>":
+  version: 4.8.2
+  resolution: "typescript@patch:typescript@npm%3A4.8.2#~builtin<compat/typescript>::version=4.8.2&hash=a1c5e5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 9096d8f6c16cb80ef3bf96fcbbd055bf1c4a43bd14f3b7be45a9fbe7ada46ec977f604d5feed3263b4f2aa7d4c7477ce5f9cd87de0d6feedec69a983f3a4f93e
+  checksum: 5cb0f02f414f5405f4b0e7ee1fd7fa9177b6a8783c9017b6cad85f56ce4c4f93e0e6f2ce37e863cb597d44227cd009474c9fbd85bf7a50004e5557426cb58079
   languageName: node
   linkType: hard
 
