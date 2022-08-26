@@ -4,13 +4,13 @@ exports[`throws if nearest tsconfig.json is not valid 1`] = `
 "FAIL e2e/__fixtures__/errors-tsconfig/index.test.ts
   ● Test suite failed to run
     ConfigError: Compiler option 'strict' requires a value of type boolean.
-      3 |     \\"module\\": \\"commonjs\\",
-      4 |     \\"target\\": \\"es2019\\",
-    > 5 |     \\"strict\\": \\"yes\\",
+      3 |     "module": "commonjs",
+      4 |     "target": "es2019",
+    > 5 |     "strict": "yes",
         |               ^
-      6 |     \\"noEmitOnError\\": true
+      6 |     "noEmitOnError": true
       7 |   },
-      8 |   \\"include\\": [\\"./**/*\\"]
+      8 |   "include": ["./**/*"]
       at tsconfig.json:5:15
 Test Suites: 1 failed, 1 total
 Tests:       0 total
