@@ -2,7 +2,7 @@
   "compilerOptions": {
     "module": "commonjs",
     "moduleResolution": "node",
-    "target": "es2019",
+    "target": "es2020",
 
     "allowUnreachableCode": false,
     "exactOptionalPropertyTypes": true,
