@@ -14,7 +14,7 @@ import runTest from '../run';
 
 jest.mock('tsd-lite');
 jest.mock('../formatter', () => ({
-  ...jest.requireActual('../formatter'),
+  ...(jest.requireActual('../formatter') as typeof import('../formatter')),
   formatTsdResults: jest.fn(() => '<mocked failure message>'),
 }));
 

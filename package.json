@@ -27,7 +27,8 @@
   ],
   "scripts": {
     "lint": "eslint .",
-    "test": "jest"
+    "test": "jest",
+    "typecheck": "yarn tsc && yarn tsc -p e2e && yarn tsc -p src/__tests__"
   },
   "dependencies": {
     "@babel/code-frame": "^7.15.8",
