@@ -1769,6 +1769,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tsconfig/node14@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "@tsconfig/node14@npm:1.0.3"
+  checksum: 19275fe80c4c8d0ad0abed6a96dbf00642e88b220b090418609c4376e1cef81bf16237bf170ad1b341452feddb8115d8dd2e5acdfdea1b27422071163dc9ba9d
+  languageName: node
+  linkType: hard
+
 "@tsd/typescript@npm:~4.8.0":
   version: 4.8.3
   resolution: "@tsd/typescript@npm:4.8.3"
@@ -3890,6 +3897,7 @@ __metadata:
     "@babel/preset-env": ^7.15.8
     "@babel/preset-typescript": ^7.15.0
     "@jest/test-result": ^29.0.0
+    "@tsconfig/node14": ^1.0.3
     "@tsd/typescript": ~4.8.0
     "@types/babel__code-frame": ^7.0.3
     "@typescript-eslint/eslint-plugin": ^5.0.0

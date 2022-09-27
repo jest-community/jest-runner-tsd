@@ -1,9 +1,6 @@
 {
+  "extends": "@tsconfig/node14/tsconfig.json",
   "compilerOptions": {
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "target": "es2020",
-
     "allowUnreachableCode": false,
     "exactOptionalPropertyTypes": true,
     "noImplicitReturns": true,

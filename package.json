@@ -41,6 +41,7 @@
     "@babel/preset-env": "^7.15.8",
     "@babel/preset-typescript": "^7.15.0",
     "@jest/test-result": "^29.0.0",
+    "@tsconfig/node14": "^1.0.3",
     "@tsd/typescript": "~4.8.0",
     "@types/babel__code-frame": "^7.0.3",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
