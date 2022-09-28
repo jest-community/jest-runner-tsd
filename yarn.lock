@@ -4054,18 +4054,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-worker@npm:^29.0.0":
-  version: 29.0.3
-  resolution: "jest-worker@npm:29.0.3"
-  dependencies:
-    "@types/node": "*"
-    merge-stream: ^2.0.0
-    supports-color: ^8.0.0
-  checksum: cdae4a58f6ab1ec3c384b42f1106004d434e65febcb34ba14a1e7d8538f7a5a5c2ebb0cf29cecfe8c71882c526ee02c4aa338a9ce0abcf11fcec9b8fa662189b
-  languageName: node
-  linkType: hard
-
-"jest-worker@npm:^29.1.0":
+"jest-worker@npm:^29.0.0, jest-worker@npm:^29.1.0":
   version: 29.1.0
   resolution: "jest-worker@npm:29.1.0"
   dependencies:
