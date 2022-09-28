@@ -50,7 +50,7 @@ jobs:
       - name: install
         run: yarn
       - name: run tsc
-        run: yarn tsc
+        run: yarn typecheck
 
   test-node:
     name: Test on Node.js v${{ matrix.node-version }}
