@@ -1,6 +1,6 @@
 {
   "name": "jest-runner-tsd",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Run your TypeScript type tests using Jest",
   "keywords": [
     "check",
