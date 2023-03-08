@@ -4,7 +4,7 @@ exports[`works with failing JS test 1`] = `
 "FAIL e2e/__fixtures__/js-failing/index.test.ts
   ✕ tsd typecheck
   ● tsd typecheck
-    Argument of type 'number' is not assignable to parameter of type 'string'.
+    Parameter type 'string' is not identical to argument type 'number'.
     > 5 | expectType<string>(concat(1, 2));
         | ^
       at e2e/__fixtures__/js-failing/index.test.ts:5:1
@@ -20,7 +20,7 @@ exports[`works with failing TS test 1`] = `
 "FAIL e2e/__fixtures__/ts-failing/index.test.ts
   ✕ tsd typecheck
   ● tsd typecheck
-    Argument of type 'Date' is not assignable to parameter of type 'string'.
+    Parameter type 'string' is not identical to argument type 'Date'.
     > 5 | expectType<string>(makeDate(5, 5, 5));
         | ^
       at e2e/__fixtures__/ts-failing/index.test.ts:5:1
