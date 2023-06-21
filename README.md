@@ -11,7 +11,8 @@ Most important differences (for the full list see [`tsd-lite` repo](https://gith
 
 - `tsd-lite` has no additional [rules](https://github.com/SamVerschueren/tsd/issues/32) or checks;
 - `jest.config` is used to discover test files;
-- and `tsconfig.json` provides configuration for TS compiler. For details see [Configuration](#configuration) section.
+- `tsconfig.json` provides configuration for TS compiler. For details see [Configuration](#configuration) section;
+- the type assertions must be imported from `tsd-lite` package.
 
 ## Install
 
@@ -50,7 +51,7 @@ To compile each test file, `tsd-lite` will read the nearest [`tsconfig.json`](ht
 
 For example, if your project already includes a `tsconfig.json` in the root directory, but you prefer to have different configuration for testing, simply add another `tsconfig.json` to a directory with the test files. It may override or extend your root configuration.
 
-**Hint:** run `yarn tsc -p path/to/__typetests__ --showConfig` to print the configuration which applies to the test files.
+**Tip:** run `yarn tsc -p path/to/__typetests__ --showConfig` to print the configuration which applies to the test files.
 
 **Note:** if `tsconfig.json` is not found, the compiler will fall back to the default configuration.
 
@@ -75,19 +76,50 @@ expectType<number>(loggedInUser.age);
 
 The assertion in this example fails with `"strict": true`, but passes with `"strict": false`.
 
-## Running Tests
+## Writing Tests
 
-If all is set, simply run `yarn jest -c jest.config.tsd.js` command. Or better include a script in `package.json`:
+Let's say you defined a `JsonObject` type:
 
-```json
-"scripts": {
-  "test:types": "jest -c jest.config.tsd.js"
+```ts
+// JsonObject.ts
+type JsonValue = string | number | boolean | JsonObject | Array<JsonValue>;
+
+export interface JsonObject {
+  [key: string]: JsonValue;
 }
 ```
 
-## Learn More
+It is relatively complex, so it is worth adding a type test to prevent mistakes and regression in the future:
 
-To learn more about `tsd` and its assertions see the [documentation](https://github.com/SamVerschueren/tsd).
+```ts
+// __typetests__/JsonObject.test.ts
+import { expectAssignable, expectNotAssignable } from 'tsd-lite';
+import type { JsonObject } from '../JsonObject.js';
+
+expectAssignable<JsonObject>({
+  caption: 'test',
+  count: 100,
+  isTest: true,
+  location: { name: 'test', start: [1, 2], valid: false, x: 10, y: 20 },
+  values: [0, 10, 20, { x: 1, y: 2 }, true, 'test', ['a', 'b']],
+});
+
+expectNotAssignable<JsonObject>({
+  filter: () => {},
+});
+```
+
+**Tip:** For the full list of type testing assertions see the [documentation of `tsd-lite`](https://github.com/mrazauskas/tsd-lite#assertions).
+
+## Running Tests
+
+If all is set, simply run `yarn jest --config jest.config.tsd.js` command. Or better include a script in `package.json`:
+
+```json
+"scripts": {
+  "test:types": "jest --config jest.config.tsd.js"
+}
+```
 
 ## License
 
