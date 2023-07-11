@@ -38,7 +38,7 @@ function getCodeFrameAndLocation(file, start) {
   const codeFrame = codeFrameColumns(
     file.text,
     { start: { line: line + 1, column: character + 1 } },
-    { highlightCode: true, linesAbove: 0, linesBelow: 0 }
+    { highlightCode: true, linesAbove: 0, linesBelow: 0 },
   );
 
   const location =
