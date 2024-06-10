@@ -1,6 +1,8 @@
 # `jest-runner-tsd`
 
-> Run your TypeScript type tests using Jest.
+> DEPRECATED: Please migrate to TSTyche: https://github.com/tstyche/tstyche
+
+Run your TypeScript type tests using Jest.
 
 [![version](https://img.shields.io/npm/v/jest-runner-tsd.svg)](https://npmjs.com/package/jest-runner-tsd)
 [![license](https://img.shields.io/github/license/jest-community/jest-runner-tsd.svg)](https://github.com/jest-community/jest-runner-tsd/blob/main/LICENSE.md)
