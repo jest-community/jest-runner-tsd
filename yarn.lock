@@ -1900,11 +1900,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 22.9.3
-  resolution: "@types/node@npm:22.9.3"
+  version: 22.10.1
+  resolution: "@types/node@npm:22.10.1"
   dependencies:
-    undici-types: ~6.19.8
-  checksum: 274cced37a8a11cd89827c551de73980a174e00bef0768c10c1fb7d3887a26b4fade25f870e3fd870432b93546e092cdbe0979e65110c0839982dc2b5938aabc
+    undici-types: ~6.20.0
+  checksum: 5a9b81500f288a8fb757b61bd939f99f72b6cb59347a5bae52dd1c2c87100ebbaa9da4256ef3cb9add2090e8704cda1d9a1ffc14ccd5db47a6466c8bae10ebcb
   languageName: node
   linkType: hard
 
@@ -2667,9 +2667,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.5.41":
-  version: 1.5.64
-  resolution: "electron-to-chromium@npm:1.5.64"
-  checksum: 9a866dcd2b480fee0d3a265318b1227cbaf1ee236cbb7aa09306b7cb8a6c21c069a8001dff1183e5a85214636a04a856a7d90e0ff3860bf86c9cbc44a69f59bb
+  version: 1.5.67
+  resolution: "electron-to-chromium@npm:1.5.67"
+  checksum: 553a1cde45ea11bab5cbfbdb2be041f1512d3edcb15f73694b340b43a001322c371655bae61ba1141a5bc282ac8dd3bacb7e49b2d320d326c0931321a623cac7
   languageName: node
   linkType: hard
 
@@ -4653,11 +4653,11 @@ __metadata:
   linkType: hard
 
 "prettier@npm:^3.0.0":
-  version: 3.3.3
-  resolution: "prettier@npm:3.3.3"
+  version: 3.4.1
+  resolution: "prettier@npm:3.4.1"
   bin:
     prettier: bin/prettier.cjs
-  checksum: bc8604354805acfdde6106852d14b045bb20827ad76a5ffc2455b71a8257f94de93f17f14e463fe844808d2ccc87248364a5691488a3304f1031326e62d9276e
+  checksum: f83ae83e38ae38f42c0b174833f58f820ed6eb063abfc5aa6725e8f9c1d626b54b1cb9d595cace525f8d59de89e186285f6bbcb460dc644ea9d8a7823cc54aca
   languageName: node
   linkType: hard
 
@@ -5189,11 +5189,11 @@ __metadata:
   linkType: hard
 
 "ts-api-utils@npm:^1.0.1":
-  version: 1.4.1
-  resolution: "ts-api-utils@npm:1.4.1"
+  version: 1.4.3
+  resolution: "ts-api-utils@npm:1.4.3"
   peerDependencies:
     typescript: ">=4.2.0"
-  checksum: 400a97162c3cbbd268c43ece99444c19455fb500edc28569c034961087a55a721c0e7b8d11507d204548facb2afbbfe82bc9f8407278ac7ad91ab6cef5d8576b
+  checksum: ea00dee382d19066b2a3d8929f1089888b05fec797e32e7a7004938eda1dccf2e77274ee2afcd4166f53fab9b8d7ee90ebb225a3183f9ba8817d636f688a148d
   languageName: node
   linkType: hard
 
@@ -5263,10 +5263,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici-types@npm:~6.19.8":
-  version: 6.19.8
-  resolution: "undici-types@npm:6.19.8"
-  checksum: de51f1b447d22571cf155dfe14ff6d12c5bdaec237c765085b439c38ca8518fc360e88c70f99469162bf2e14188a7b0bcb06e1ed2dc031042b984b0bb9544017
+"undici-types@npm:~6.20.0":
+  version: 6.20.0
+  resolution: "undici-types@npm:6.20.0"
+  checksum: b7bc50f012dc6afbcce56c9fd62d7e86b20a62ff21f12b7b5cbf1973b9578d90f22a9c7fe50e638e96905d33893bf2f9f16d98929c4673c2480de05c6c96ea8b
   languageName: node
   linkType: hard
 
