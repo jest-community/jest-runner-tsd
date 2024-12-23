@@ -2400,9 +2400,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001688":
-  version: 1.0.30001688
-  resolution: "caniuse-lite@npm:1.0.30001688"
-  checksum: b48109e337f924a969ad3505d81cde32624b598f3ff67047dbd69a9bed59672cea37b6095c3a876174511447be5e356d87acac6c859d941572e57c220978e241
+  version: 1.0.30001690
+  resolution: "caniuse-lite@npm:1.0.30001690"
+  checksum: f2c1b595f15d8de4d9ccd155d61ac9f00ac62f1515870505a0186266fd52aef169fcddc90d8a4814e52b77107244806466fadc2c216662f23f1022a430e735ee
   languageName: node
   linkType: hard
 
@@ -2635,9 +2635,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.5.73":
-  version: 1.5.73
-  resolution: "electron-to-chromium@npm:1.5.73"
-  checksum: 9e23966afabda22090ebd603e8312af5045aca55f02b8490f5dc66e3bcd2dfefbe3ab0968a587050604e9f398bded342315aa2ec78e418d37c7f237c2a2c69b9
+  version: 1.5.75
+  resolution: "electron-to-chromium@npm:1.5.75"
+  checksum: 72e24a908efb29a9da8fbdb55b5a31369615b3d0c95c801679f0a51c26e222a13a5ca219180a2dbb7a85da2017b8b16bc2e79fa71293dbe81d0b6fadaf7755dc
   languageName: node
   linkType: hard
 
@@ -3332,11 +3332,11 @@ __metadata:
   linkType: hard
 
 "is-core-module@npm:^2.16.0":
-  version: 2.16.0
-  resolution: "is-core-module@npm:2.16.0"
+  version: 2.16.1
+  resolution: "is-core-module@npm:2.16.1"
   dependencies:
     hasown: ^2.0.2
-  checksum: 98aa14eaee864c2e86fff4e08813e0da3ca7ac38dd0a43b9f10aeec48bfbc4827e2677349adb626f66921caef7fa9e2745c80b8b7cafe8ac24d46dc8124cc216
+  checksum: 6ec5b3c42d9cbf1ac23f164b16b8a140c3cec338bf8f884c076ca89950c7cc04c33e78f02b8cae7ff4751f3247e3174b2330f1fe4de194c7210deb8b1ea316a7
   languageName: node
   linkType: hard
 
@@ -4773,28 +4773,28 @@ __metadata:
   linkType: hard
 
 "resolve@npm:^1.14.2, resolve@npm:^1.20.0":
-  version: 1.22.9
-  resolution: "resolve@npm:1.22.9"
+  version: 1.22.10
+  resolution: "resolve@npm:1.22.10"
   dependencies:
     is-core-module: ^2.16.0
     path-parse: ^1.0.7
     supports-preserve-symlinks-flag: ^1.0.0
   bin:
     resolve: bin/resolve
-  checksum: dd7da6c4ccc60bb4884f636b987102bb1cae6c486f7172361719a7f52769660c9a83a2d3520bef71d91f3da27e4fb8a40404c63ee4372a15863f3208bef5af67
+  checksum: ab7a32ff4046fcd7c6fdd525b24a7527847d03c3650c733b909b01b757f92eb23510afa9cc3e9bf3f26a3e073b48c88c706dfd4c1d2fb4a16a96b73b6328ddcf
   languageName: node
   linkType: hard
 
 "resolve@patch:resolve@^1.14.2#~builtin<compat/resolve>, resolve@patch:resolve@^1.20.0#~builtin<compat/resolve>":
-  version: 1.22.9
-  resolution: "resolve@patch:resolve@npm%3A1.22.9#~builtin<compat/resolve>::version=1.22.9&hash=c3c19d"
+  version: 1.22.10
+  resolution: "resolve@patch:resolve@npm%3A1.22.10#~builtin<compat/resolve>::version=1.22.10&hash=c3c19d"
   dependencies:
     is-core-module: ^2.16.0
     path-parse: ^1.0.7
     supports-preserve-symlinks-flag: ^1.0.0
   bin:
     resolve: bin/resolve
-  checksum: 8db5c0f16ab65f58c036cb5be0964605c97c29b9fdf1e20f298ec027e2a4fd96ad0413aa14f6e761629956dc552cd478c2f9b6c5a07e37e4c85209090162501e
+  checksum: 8aac1e4e4628bd00bf4b94b23de137dd3fe44097a8d528fd66db74484be929936e20c696e1a3edf4488f37e14180b73df6f600992baea3e089e8674291f16c9d
   languageName: node
   linkType: hard
 
