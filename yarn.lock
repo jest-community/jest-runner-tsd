@@ -2635,9 +2635,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.5.73":
-  version: 1.5.75
-  resolution: "electron-to-chromium@npm:1.5.75"
-  checksum: 72e24a908efb29a9da8fbdb55b5a31369615b3d0c95c801679f0a51c26e222a13a5ca219180a2dbb7a85da2017b8b16bc2e79fa71293dbe81d0b6fadaf7755dc
+  version: 1.5.76
+  resolution: "electron-to-chromium@npm:1.5.76"
+  checksum: bbd6337f92fc07e0b7fcc5473265d080964adf59b7a58503ddd6d954d0494d0a6e1540dd35f5aa6229f6b87541c3436e0c15c63d2d71fa4b66a05adc88bd2fb9
   languageName: node
   linkType: hard
 
@@ -2950,11 +2950,11 @@ __metadata:
   linkType: hard
 
 "fastq@npm:^1.6.0":
-  version: 1.17.1
-  resolution: "fastq@npm:1.17.1"
+  version: 1.18.0
+  resolution: "fastq@npm:1.18.0"
   dependencies:
     reusify: ^1.0.4
-  checksum: a8c5b26788d5a1763f88bae56a8ddeee579f935a831c5fe7a8268cea5b0a91fbfe705f612209e02d639b881d7b48e461a50da4a10cfaa40da5ca7cc9da098d88
+  checksum: fb8d94318c2e5545a1913c1647b35e8b7825caaba888a98ef9887085e57f5a82104aefbb05f26c81d4e220f02b2ea6f2c999132186d8c77e6c681d91870191ba
   languageName: node
   linkType: hard
 
