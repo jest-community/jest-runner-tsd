@@ -1887,11 +1887,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 22.10.2
-  resolution: "@types/node@npm:22.10.2"
+  version: 22.10.5
+  resolution: "@types/node@npm:22.10.5"
   dependencies:
     undici-types: ~6.20.0
-  checksum: b22401e6e7d1484e437d802c72f5560e18100b1257b9ad0574d6fe05bebe4dbcb620ea68627d1f1406775070d29ace8b6b51f57e7b1c7b8bafafe6da7f29c843
+  checksum: 3b0e966df4e130edac3ad034f1cddbe134e70f11556062468c9fbd749a3b07a44445a3a75a7eec68a104930bf05d4899f1a418c4ae48493d2c8c1544d8594bcc
   languageName: node
   linkType: hard
 
@@ -2923,15 +2923,15 @@ __metadata:
   linkType: hard
 
 "fast-glob@npm:^3.2.9":
-  version: 3.3.2
-  resolution: "fast-glob@npm:3.3.2"
+  version: 3.3.3
+  resolution: "fast-glob@npm:3.3.3"
   dependencies:
     "@nodelib/fs.stat": ^2.0.2
     "@nodelib/fs.walk": ^1.2.3
     glob-parent: ^5.1.2
     merge2: ^1.3.0
-    micromatch: ^4.0.4
-  checksum: 900e4979f4dbc3313840078419245621259f349950411ca2fa445a2f9a1a6d98c3b5e7e0660c5ccd563aa61abe133a21765c6c0dec8e57da1ba71d8000b05ec1
+    micromatch: ^4.0.8
+  checksum: 0704d7b85c0305fd2cef37777337dfa26230fdd072dce9fb5c82a4b03156f3ffb8ed3e636033e65d45d2a5805a4e475825369a27404c0307f2db0c8eb3366fbd
   languageName: node
   linkType: hard
 
@@ -4183,7 +4183,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"micromatch@npm:^4.0.4":
+"micromatch@npm:^4.0.4, micromatch@npm:^4.0.8":
   version: 4.0.8
   resolution: "micromatch@npm:4.0.8"
   dependencies:
