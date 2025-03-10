@@ -1887,11 +1887,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 22.13.8
-  resolution: "@types/node@npm:22.13.8"
+  version: 22.13.10
+  resolution: "@types/node@npm:22.13.10"
   dependencies:
     undici-types: ~6.20.0
-  checksum: 6c07f95d88f1e286ec4517b35c8b53075e6076855fc52536c1ffad0e6b9091ec9ac2a0dd681b47e57da9196868c69342711a51ef1545f157aa893b5c546b8a36
+  checksum: 1cd6b899df728732c60c0defad63e26ca18d87a3b81bd75666fe9aed6cdf9e488433976b22ffcabfdeef9d351cf8ff94853b0686e6708ef62065482ccf5b0a6e
   languageName: node
   linkType: hard
 
@@ -2072,11 +2072,11 @@ __metadata:
   linkType: hard
 
 "acorn@npm:^8.9.0":
-  version: 8.14.0
-  resolution: "acorn@npm:8.14.0"
+  version: 8.14.1
+  resolution: "acorn@npm:8.14.1"
   bin:
     acorn: bin/acorn
-  checksum: 8755074ba55fff94e84e81c72f1013c2d9c78e973c31231c8ae505a5f966859baf654bddd75046bffd73ce816b149298977fff5077a3033dedba0ae2aad152d4
+  checksum: 260d9bb6017a1b6e42d31364687f0258f78eb20210b36ef2baad38fd619d78d4e95ff7dde9b3dbe0d81f137f79a8d651a845363a26e6985997f7b71145dc5e94
   languageName: node
   linkType: hard
 
@@ -2400,9 +2400,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001688":
-  version: 1.0.30001701
-  resolution: "caniuse-lite@npm:1.0.30001701"
-  checksum: 1abcb27ea3296dacdaa669cfe8e094432165f0541bf49ef7a88c2758d0cec5f9a839ea948f7f48c0c63c633d98f6f6c55ccf97ffebea2caaf465389500df5422
+  version: 1.0.30001703
+  resolution: "caniuse-lite@npm:1.0.30001703"
+  checksum: f3c19e357df7f5ff480a8a24a61213d1442bf3df9e2f9563a47f4c95e9c08ea7d3c8faa965bc84dcc57c569542584c965b30d552d9b35e421f352c974980de17
   languageName: node
   linkType: hard
 
@@ -2635,9 +2635,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.5.73":
-  version: 1.5.109
-  resolution: "electron-to-chromium@npm:1.5.109"
-  checksum: 46f71d384f46ead83550027358a45b58370fb243459c347910557ee8d2530637157b54192c702b9adf2bc5c436a8ec2bd3f2da4b3f8e1810aca1becd38c26ba3
+  version: 1.5.113
+  resolution: "electron-to-chromium@npm:1.5.113"
+  checksum: 7339108c6379ce36cf64560d431c42fc4b4fc3ac2ed434aad1730a39bc03fed5273faba3c7aa9387efc361b3732653c16ecdf23e33d8f0c67de378a7a5206cf9
   languageName: node
   linkType: hard
 
@@ -2716,13 +2716,13 @@ __metadata:
   linkType: hard
 
 "eslint-config-prettier@npm:^10.0.0":
-  version: 10.0.2
-  resolution: "eslint-config-prettier@npm:10.0.2"
+  version: 10.1.1
+  resolution: "eslint-config-prettier@npm:10.1.1"
   peerDependencies:
     eslint: ">=7.0.0"
   bin:
-    eslint-config-prettier: build/bin/cli.js
-  checksum: 76c30d85b29320c631aafe7e10fa4d065c574d3e5491f7f9c888bfc1351e9ded6b0e0821c4d7b8f49e86b056206c91fb2f5d4b30c8f2c57a6c44fdafa75716c8
+    eslint-config-prettier: bin/cli.js
+  checksum: 1211a973f4b5c3fe4a152ca58e40493c9d51b5145a4dfd6a4606b65e480b43c072d1a9b41b179adeb3aac93b6425b2d05d5e4f696e2447ac833373b4ac707a6b
   languageName: node
   linkType: hard
 
