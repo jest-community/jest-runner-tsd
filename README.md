@@ -1,3 +1,8 @@
+> [!CAUTION]
+>
+> `jest-runner-tsd` is deprecated due to `tsd-lite` being [deprecated](https://github.com/mrazauskas/tsd-lite/issues/364).  
+> Migrate to [TSTyche](https://github.com/tstyche/tstyche), it has all the bells and whistles.
+
 # `jest-runner-tsd`
 
 > Run your TypeScript type tests using Jest.
