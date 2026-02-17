@@ -3756,7 +3756,7 @@ __metadata:
     execa: ^5.1.1
     jest: ^29.1.0
     prettier: ^3.0.0
-    tsd-lite: ^0.8.0
+    tsd-lite: ^0.9.0
     typescript: ~5.6.0
   peerDependencies:
     "@tsd/typescript": 4.x || 5.x
@@ -5046,12 +5046,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsd-lite@npm:^0.8.0":
-  version: 0.8.2
-  resolution: "tsd-lite@npm:0.8.2"
+"tsd-lite@npm:^0.9.0":
+  version: 0.9.0
+  resolution: "tsd-lite@npm:0.9.0"
   peerDependencies:
     "@tsd/typescript": 4.x || 5.x
-  checksum: c9da2b929dc66c785bf0df463ff26cb2761c06a99d6ebd0a11cf21ce49e808bef5c99fbbfe953cc7f9db1a916f80fecbee0f688cf0300c44d41c5bc41ee3c0c4
+  checksum: 4a239f77ce1393fdccecec1fb7bea3fb63a0376d00b3c4a6110590f1201e929e82218d37f730e21059dfd84cc47a46b038ce3121f8491baa22f0dd844e1bd85e
   languageName: node
   linkType: hard
 
