@@ -1880,11 +1880,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 25.3.5
-  resolution: "@types/node@npm:25.3.5"
+  version: 25.5.0
+  resolution: "@types/node@npm:25.5.0"
   dependencies:
     undici-types: ~7.18.0
-  checksum: bc8400baaf2023c8d843526e13ac1c50f46b8416eb3c5480c9f01b3f3787ecc7c8c740110cce3568776c8f73be06eaaba7bfcb601f5946c56785589a6a3bd148
+  checksum: ea0908794d5c011f4f2b5d2e93737ae047ff4a9fd1ec6da27e13a1f976d8d0e029830ddf2d4177e00a2601307e8bbc06e7b4cb3e29e889489d42dd44b49c796a
   languageName: node
   linkType: hard
 
@@ -2287,11 +2287,11 @@ __metadata:
   linkType: hard
 
 "baseline-browser-mapping@npm:^2.9.0":
-  version: 2.10.0
-  resolution: "baseline-browser-mapping@npm:2.10.0"
+  version: 2.10.8
+  resolution: "baseline-browser-mapping@npm:2.10.8"
   bin:
     baseline-browser-mapping: dist/cli.cjs
-  checksum: 14511e8ff69021e14d8dd9860d42122c3d156b3eec099d6937e630bb94493caf72d1efef8b1897694357fa58a61f7939ce1584d8964463e3dd23eacd0704c3e6
+  checksum: 5ccd712b8190b919e0873ee2d09e9c5d5b646c89db2e16337ab86379ba1a40deb71ada6f388282dd88c0f8a6ec167d02044587095a51cd18848bfea647123c4f
   languageName: node
   linkType: hard
 
@@ -2404,9 +2404,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001759":
-  version: 1.0.30001777
-  resolution: "caniuse-lite@npm:1.0.30001777"
-  checksum: 962e97beb3a21d84ee7b5a04d68b5dc55cd3a84ff14f1ec6ad031a76ade8432a2d5d4a9697099d2f7e197f707d4f2698a01b756c8c68a30a13b37ded09c9b58a
+  version: 1.0.30001779
+  resolution: "caniuse-lite@npm:1.0.30001779"
+  checksum: 6494dee776868a83da610ab3196a095cd204857774313a61f65d05367f60cf93a213f1ed0338b1f1377b5efcf8f51efd20cc3d1b193a36965a924ffa4ef8ddc2
   languageName: node
   linkType: hard
 
@@ -2632,9 +2632,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.5.263":
-  version: 1.5.307
-  resolution: "electron-to-chromium@npm:1.5.307"
-  checksum: ade0c7abf6cbe2cc46c5c829747b6f2c963ad9c993c0e66cc76acd74175801c3be09a5589befdfa20121863d6748cc76d46f5a38af229186b8328d1a01c4d612
+  version: 1.5.313
+  resolution: "electron-to-chromium@npm:1.5.313"
+  checksum: a58e99671e11ad938fe1e2c776be7119c0a07f988b356d32db83bf035f9c3f004731d69207f0283fa28c63e948d9972a7cefb601fd56ae54eb0320f254e83f1a
   languageName: node
   linkType: hard
 
@@ -3003,9 +3003,9 @@ __metadata:
   linkType: hard
 
 "flatted@npm:^3.2.9":
-  version: 3.4.0
-  resolution: "flatted@npm:3.4.0"
-  checksum: 9b8f745d0afae962340525abb322d86c42de3f8114794a4fda058142b3906866ba1a478befc4d2f7b8fcb3a7957728c391d02343349657068a26699833ddac95
+  version: 3.4.1
+  resolution: "flatted@npm:3.4.1"
+  checksum: c98e458fac822c3d6f814e38154f9f5c7aa4b10c259467beda05740596cf9a826754a7a77b840b8ca2926a3e22a6f3a27992f0c673a9dbb4f6ea9f132e9a9db4
   languageName: node
   linkType: hard
 
@@ -4049,9 +4049,9 @@ __metadata:
   linkType: hard
 
 "lru-cache@npm:^11.0.0, lru-cache@npm:^11.1.0, lru-cache@npm:^11.2.1":
-  version: 11.2.6
-  resolution: "lru-cache@npm:11.2.6"
-  checksum: 26fe602c92a0cb7a8da9a85db162ddd810d84507d9c4ef8d95a785a805648f9579e1148aaeac260f6b6315197bcf27c1b7e60a0a066621d6e95b3587699a0c70
+  version: 11.2.7
+  resolution: "lru-cache@npm:11.2.7"
+  checksum: c4aba67de4a8566622eb1e99cc5f43c1f91129c941af7624d4bbd48f312525d4bf4ce808a414d658a6bc336f0163daa1098d3a3e736989ad65d3231f587fbc30
   languageName: node
   linkType: hard
 
@@ -4946,15 +4946,15 @@ __metadata:
   linkType: hard
 
 "tar@npm:^7.5.4":
-  version: 7.5.10
-  resolution: "tar@npm:7.5.10"
+  version: 7.5.11
+  resolution: "tar@npm:7.5.11"
   dependencies:
     "@isaacs/fs-minipass": ^4.0.0
     chownr: ^3.0.0
     minipass: ^7.1.2
     minizlib: ^3.1.0
     yallist: ^5.0.0
-  checksum: aed1a7ae188fc80539184682bfaed7c4d5ae276f591dce67cc03b4ed8898aebde0cc195187f6abd455e3f25b24399a809ed2eaf6410ca3abc1ba30b19a94089e
+  checksum: 7f6785a85dd571b88985e493ec86f692962cbfa7b4017961fddfd2241e0ff3bcd89ed347f4c02b5433aa22b30cca5566e8711543df054fda8fd12425f505378f
   languageName: node
   linkType: hard
 
