@@ -857,9 +857,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-modules-systemjs@npm:^7.29.0":
-  version: 7.29.0
-  resolution: "@babel/plugin-transform-modules-systemjs@npm:7.29.0"
+"@babel/plugin-transform-modules-systemjs@npm:^7.29.4":
+  version: 7.29.4
+  resolution: "@babel/plugin-transform-modules-systemjs@npm:7.29.4"
   dependencies:
     "@babel/helper-module-transforms": ^7.28.6
     "@babel/helper-plugin-utils": ^7.28.6
@@ -867,7 +867,7 @@ __metadata:
     "@babel/traverse": ^7.29.0
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 36fd7bcd694549effdbdf733c32f0c9dbadea052316ff5e0830b07482a60c8ff1ee79850efff05e8046c4b99c241832f2c5267e0ae7c721c531c8ef12930c4b9
+  checksum: d9cbb30669077756048af990a08ad1ba149785c336024affa49848dc4ffc5948bfaaf52d90bbec711a1f320e19e2c60182dbeff40d81cc5b9a09a87919abe07d
   languageName: node
   linkType: hard
 
@@ -1178,8 +1178,8 @@ __metadata:
   linkType: hard
 
 "@babel/preset-env@npm:^7.15.8":
-  version: 7.29.3
-  resolution: "@babel/preset-env@npm:7.29.3"
+  version: 7.29.5
+  resolution: "@babel/preset-env@npm:7.29.5"
   dependencies:
     "@babel/compat-data": ^7.29.3
     "@babel/helper-compilation-targets": ^7.28.6
@@ -1220,7 +1220,7 @@ __metadata:
     "@babel/plugin-transform-member-expression-literals": ^7.27.1
     "@babel/plugin-transform-modules-amd": ^7.27.1
     "@babel/plugin-transform-modules-commonjs": ^7.28.6
-    "@babel/plugin-transform-modules-systemjs": ^7.29.0
+    "@babel/plugin-transform-modules-systemjs": ^7.29.4
     "@babel/plugin-transform-modules-umd": ^7.27.1
     "@babel/plugin-transform-named-capturing-groups-regex": ^7.29.0
     "@babel/plugin-transform-new-target": ^7.27.1
@@ -1254,7 +1254,7 @@ __metadata:
     semver: ^6.3.1
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: bc07d151dbbcee339e9f7f68876b8d89798e01bc0a04d44c92460be61ac7bdc34810e81bc99055dc01305c86350fd8b54969fc907aa405702824b9b96917028d
+  checksum: 4241d9aa5488dc6df958fe866b747fcd2fd1c1385e95e05900bc6377b1c976cb5bc2057200e8a6c1f76dc99566983e27db927b768df09d7617f61d133f760b1a
   languageName: node
   linkType: hard
 
@@ -1862,11 +1862,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 25.6.0
-  resolution: "@types/node@npm:25.6.0"
+  version: 25.6.2
+  resolution: "@types/node@npm:25.6.2"
   dependencies:
     undici-types: ~7.19.0
-  checksum: 98945eb59909a08868ccac203022f122b5549448ef8628de9eac3fe20481467cd6ec32af819fd432695f67ac21ebbbc69c8a141de6c6455edaf6e717e2cb89c9
+  checksum: 73ba68cce7b80bec594ba8b48b88af3f58f90cf5a6066f922e1c1efb2165862054498ee0464305cfed4e54596561520959d7a0e89478d7a450cd7ba3114e98f6
   languageName: node
   linkType: hard
 
@@ -2024,9 +2024,9 @@ __metadata:
   linkType: hard
 
 "@ungap/structured-clone@npm:^1.2.0":
-  version: 1.3.0
-  resolution: "@ungap/structured-clone@npm:1.3.0"
-  checksum: 64ed518f49c2b31f5b50f8570a1e37bde3b62f2460042c50f132430b2d869c4a6586f13aa33a58a4722715b8158c68cae2827389d6752ac54da2893c83e480fc
+  version: 1.3.1
+  resolution: "@ungap/structured-clone@npm:1.3.1"
+  checksum: b8affbf8c95ecb8449a703fff6df1daa0acc6163785c7ef5867b35c3e5ae12fbba05ead6cda541b72756a63ab67c3769c403e9ae8b054439f4088b5eb1d8b8ba
   languageName: node
   linkType: hard
 
@@ -2255,11 +2255,11 @@ __metadata:
   linkType: hard
 
 "baseline-browser-mapping@npm:^2.10.12":
-  version: 2.10.27
-  resolution: "baseline-browser-mapping@npm:2.10.27"
+  version: 2.10.29
+  resolution: "baseline-browser-mapping@npm:2.10.29"
   bin:
     baseline-browser-mapping: dist/cli.cjs
-  checksum: 7b89ecfcf34132b11a8f07249e21ede07363f02136f61b9750d953da22e376002a0a8f01163dfeb57ec7cee9eb32569f24113659f692b194125d89c64ea8156d
+  checksum: 632f19359cda715beed0af93118aa6463506f897c680c5092523c7105dd9f5e08a95552078f6bab0c261a16b1221842a8f9d5b0da02921d3329a5894d2a38688
   languageName: node
   linkType: hard
 
@@ -2344,9 +2344,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001782":
-  version: 1.0.30001791
-  resolution: "caniuse-lite@npm:1.0.30001791"
-  checksum: 9b2f55d51b85abbb270a0d58c28b8e799ccb8fd5ef017179db3d328c8fead4f1738d95a354e75169af31c0424ffb1b691533722522ff280d4aab05d0fe4eddbd
+  version: 1.0.30001792
+  resolution: "caniuse-lite@npm:1.0.30001792"
+  checksum: 25e2ba0feb792fbc99e98b236653dccec6387bf9351510b5401ffcb0c25193e47a2ba37e5ce44f92e0fb023670fe077b938ab8e1bad53bc03e95673e5bd5d439
   languageName: node
   linkType: hard
 
@@ -2572,9 +2572,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.5.328":
-  version: 1.5.349
-  resolution: "electron-to-chromium@npm:1.5.349"
-  checksum: b2e5f52c63789514ab29d27f830bf7f8a4c44cd58e652e201d48531eb49528a3acaa2809e6dfda913eb0b8c314afaa53ac382b970f599d254ba62802cdcc4080
+  version: 1.5.353
+  resolution: "electron-to-chromium@npm:1.5.353"
+  checksum: d595c09753cd27d250e48dc4755dbe1f455721a8221897fe76b4d2686eb759e40bae2dc33127a71eeaf87afc56c3b49186988834b1df63026dc45e4bca953b9b
   languageName: node
   linkType: hard
 
@@ -3093,7 +3093,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hasown@npm:^2.0.2":
+"hasown@npm:^2.0.3":
   version: 2.0.3
   resolution: "hasown@npm:2.0.3"
   dependencies:
@@ -3177,11 +3177,11 @@ __metadata:
   linkType: hard
 
 "is-core-module@npm:^2.16.1":
-  version: 2.16.1
-  resolution: "is-core-module@npm:2.16.1"
+  version: 2.16.2
+  resolution: "is-core-module@npm:2.16.2"
   dependencies:
-    hasown: ^2.0.2
-  checksum: 6ec5b3c42d9cbf1ac23f164b16b8a140c3cec338bf8f884c076ca89950c7cc04c33e78f02b8cae7ff4751f3247e3174b2330f1fe4de194c7210deb8b1ea316a7
+    hasown: ^2.0.3
+  checksum: 9317844b4959f8fb268bfc1b4e24033d60058235c2e7273499c2abfd8e4510e7059b1339bd9109766293747daa3e0b5a89095fb2825a866a4093563fe8fdf16f
   languageName: node
   linkType: hard
 
@@ -4498,11 +4498,11 @@ __metadata:
   linkType: hard
 
 "semver@npm:^7.3.5, semver@npm:^7.5.3, semver@npm:^7.5.4":
-  version: 7.7.4
-  resolution: "semver@npm:7.7.4"
+  version: 7.8.0
+  resolution: "semver@npm:7.8.0"
   bin:
     semver: bin/semver.js
-  checksum: 9b4a6a58e98b9723fafcafa393c9d4e8edefaa60b8dfbe39e30892a3604cf1f45f52df9cfb1ae1a22b44c8b3d57fec8a9bb7b3e1645431587cb272399ede152e
+  checksum: 68e38bc26ed1191d7c78d2b711bdffc2f8b1d05a1caadda41a1d7e1a9d32e1da5ae5b645de5c5f2b27bde830d7e9c1cbeeafcb8fda091830411df7d40be405b1
   languageName: node
   linkType: hard
 
@@ -4662,15 +4662,15 @@ __metadata:
   linkType: hard
 
 "tar@npm:^7.5.4":
-  version: 7.5.13
-  resolution: "tar@npm:7.5.13"
+  version: 7.5.15
+  resolution: "tar@npm:7.5.15"
   dependencies:
     "@isaacs/fs-minipass": ^4.0.0
     chownr: ^3.0.0
     minipass: ^7.1.2
     minizlib: ^3.1.0
     yallist: ^5.0.0
-  checksum: adcc2a9179dab1b36ecb26575e698d2df8491a1df2cc83e2a0fdd8eaefd076da60dd2e20383a37760b5790bee34e9291aa2b2a9b3deef37ff03c1046219e5df7
+  checksum: b00ede0737f262691b18bd60aebdd15663c7cdabd40adce64dde0b69f65b7afb91cf31a4cae3bc184e2358aa14371fb0b56d6f7c0c0cc8b0238df1242c0e07ca
   languageName: node
   linkType: hard
 
