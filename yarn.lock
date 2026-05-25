@@ -1862,11 +1862,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 25.8.0
-  resolution: "@types/node@npm:25.8.0"
+  version: 25.9.1
+  resolution: "@types/node@npm:25.9.1"
   dependencies:
     undici-types: ">=7.24.0 <7.24.7"
-  checksum: 551b1e1e49d0a799235813d9f35201afdcddb5dc09c5b84832aae9f953ce419b24005d976058bac8a084cf525458e2406abe139659e4c4b2e1c8b5da153e196a
+  checksum: 1a18c731409b14d59cea90ada7f2949ebbd0acf8df5cdfc4e0a981e3fd3f1a9cdc547752b139167989e04c888c61aeac64c4519510b7edbe4d5f456b2975f12c
   languageName: node
   linkType: hard
 
@@ -2255,11 +2255,11 @@ __metadata:
   linkType: hard
 
 "baseline-browser-mapping@npm:^2.10.12":
-  version: 2.10.30
-  resolution: "baseline-browser-mapping@npm:2.10.30"
+  version: 2.10.32
+  resolution: "baseline-browser-mapping@npm:2.10.32"
   bin:
     baseline-browser-mapping: dist/cli.cjs
-  checksum: 1ad8d9af3cebc4b91cf04b99c326fb0aab697ded642f3830deb96838c6dbb5d35ad2a2cad49064c6136b61bd962d77c23cd05db4f2e65f1fe1cfcca44ace9f4e
+  checksum: 2efb31c0b9ff426ae5d11646da7cdc23500cf21adffb66993778c38762499df5e537d3c9332542acf629675f8104073804f18115d5de5e6e4fb45abba096ec15
   languageName: node
   linkType: hard
 
@@ -2572,9 +2572,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.5.328":
-  version: 1.5.358
-  resolution: "electron-to-chromium@npm:1.5.358"
-  checksum: cab5eb95a6b7a7fac04018004ffe01072a51c079d3bf0d7f7fda4fb18f0972ba1e198d7822af9ec0072a19a85668dae01b4d787ab9b2a086e3ef47ff61c9468b
+  version: 1.5.361
+  resolution: "electron-to-chromium@npm:1.5.361"
+  checksum: 1efd6d027ae2c8670ed00c60bc05c31f2d6ad3b3b6e3678176402646b04805bfc44cefc1c0c5e622d27a77d40a61f83376d6480c011d8ec5010dbdb4eb4c0964
   languageName: node
   linkType: hard
 
@@ -4066,9 +4066,9 @@ __metadata:
   linkType: hard
 
 "node-releases@npm:^2.0.36":
-  version: 2.0.44
-  resolution: "node-releases@npm:2.0.44"
-  checksum: a96278a9ec8f3d67b796693047499fc64724f97cb7fb8aa50e8e5a9408f4f2c1e2eb8f3ee44c43bfd34b0331514d9a8ad5efc7a98e7b720a4b9cd9b4d0f0c2da
+  version: 2.0.46
+  resolution: "node-releases@npm:2.0.46"
+  checksum: 155829350044a51eeb57d20bed485389ed5c6bf8e50fe48875f13fe2d7721b87e135133a3b2f34dde32deb224bd205b0d768bd3f3171c3623078308b8a035fe4
   languageName: node
   linkType: hard
 
@@ -4498,11 +4498,11 @@ __metadata:
   linkType: hard
 
 "semver@npm:^7.3.5, semver@npm:^7.5.3, semver@npm:^7.5.4":
-  version: 7.8.0
-  resolution: "semver@npm:7.8.0"
+  version: 7.8.1
+  resolution: "semver@npm:7.8.1"
   bin:
     semver: bin/semver.js
-  checksum: 68e38bc26ed1191d7c78d2b711bdffc2f8b1d05a1caadda41a1d7e1a9d32e1da5ae5b645de5c5f2b27bde830d7e9c1cbeeafcb8fda091830411df7d40be405b1
+  checksum: c6486ac12dc85120fc1daac8001350a4cd8126933720da496b0e8b841f170a35d4856b898b5288dfe7c1771bcadbf32c582254eade40ba16f8b6d296625d2b33
   languageName: node
   linkType: hard
 
