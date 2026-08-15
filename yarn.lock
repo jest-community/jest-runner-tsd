@@ -1758,10 +1758,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsconfig/node16@npm:^16.1.0":
-  version: 16.1.8
-  resolution: "@tsconfig/node16@npm:16.1.8"
-  checksum: 094676ab09f94724435f878de8372ecf940272e221ba76e4e0168197123ef73243994dbd46ae6a2fcd39f3924f2dea8e7f6f2abc12ac9903ddfec492ccd33130
+"@tsconfig/node18@npm:^18.2.0":
+  version: 18.2.7
+  resolution: "@tsconfig/node18@npm:18.2.7"
+  checksum: 625d1a390f77b03e8c8d999db76f7ddacf261156a76e906d972e89a4b7fccdafecd44c9d8ed7d51c3cd752f1d15a8deeb459ef0f870c072d7c53094817ab6373
   languageName: node
   linkType: hard
 
@@ -3601,7 +3601,7 @@ __metadata:
     "@babel/preset-env": ^7.15.8
     "@babel/preset-typescript": ^7.15.0
     "@jest/test-result": ^29.1.0
-    "@tsconfig/node16": ^16.1.0
+    "@tsconfig/node18": ^18.2.0
     "@tsd/typescript": ~5.6.0
     "@types/babel__code-frame": ^7.0.3
     "@typescript-eslint/eslint-plugin": ^6.0.0
